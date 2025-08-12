@@ -16,7 +16,7 @@
 # # The final command to run when your container starts
 # CMD ["python", "app.py"]
 
-FROM hf-base-v1.1.0
+FROM python:3.9-slim
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
