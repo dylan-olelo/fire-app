@@ -1,9 +1,11 @@
+# flask
+# sentence-transformers
+# faiss-cpu
+# torch
+# transformers
+# accelerate
+# bitsandbytes
+# PyMuPDF
+# numpy  
+
 flask
-sentence-transformers
-faiss-cpu
-torch
-transformers
-accelerate
-bitsandbytes
-PyMuPDF
-numpy
