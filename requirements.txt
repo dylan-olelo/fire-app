@@ -1,0 +1,9 @@
+flask
+sentence-transformers
+faiss-cpu
+torch
+transformers
+accelerate
+bitsandbytes
+PyMuPDF
+numpy
