@@ -16,6 +16,8 @@ RUN mkdir -p /app/cache
 # Install all the Python libraries from your requirements.txt
 RUN pip install -r requirements.txt
 
+RUN python download_models.py
+
 # --- NEW: PERMISSION FIX ---
 # Create a new non-root user named "user"
 RUN useradd -m -u 1000 user
