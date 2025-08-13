@@ -9,7 +9,7 @@ from transformers import pipeline
 INDEX_FILE = "faiss_index.bin"
 CHUNKS_FILE = "text_chunks.pkl"
 RETRIEVER_MODEL = 'all-MiniLM-L6-v2'
-GENERATOR_MODEL = "microsoft/Phi-3-mini-4k-instruct"
+GENERATOR_MODEL = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 
 # --- 1. Initialize Flask and Models ---
 app = Flask(__name__)
