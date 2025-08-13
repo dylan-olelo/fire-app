@@ -17,6 +17,7 @@
 # CMD ["python", "app.py"]
 
 FROM python:3.9-slim
+ENV SENTENCE_TRANSFORMERS_HOME=/app/cache
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
