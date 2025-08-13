@@ -34,4 +34,4 @@ EXPOSE 7860
 
 # The command to run your Flask app when the container starts
 # This will now be run as the non-root 'user'
-CMD ["python", "app.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:7860", "app:app"]
