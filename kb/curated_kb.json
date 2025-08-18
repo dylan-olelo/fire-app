@@ -1,0 +1,53 @@
+{
+  "Tesla_Model_3": {
+    "intents": {
+      "lift_points": {
+        "patterns": [
+          "lift point",
+          "designated lift",
+          "jack point",
+          "jack stand",
+          "lift area",
+          "lifting points",
+          "stabilization point",
+          "cribbing point"
+        ],
+        "answer": "Use the four designated lift points along the vehicle side rails. Place lift pads only at the reinforced locations indicated by the molded pads; never place jacks under the high‑voltage battery (orange area). For side‑resting stabilization, place cribbing along the highlighted rails, not under the orange battery. Avoid orange cables and the battery housing.",
+        "images": [
+          "images/Tesla_Model_3/designated_lift_areas.png"
+        ]
+      },
+      "power_shutdown": {
+        "patterns": [
+          "shut off power",
+          "power off",
+          "disable power",
+          "isolation",
+          "first responder loop",
+          "cut loop",
+          "12v cut",
+          "12 v cut",
+          "12-volt",
+          "12 volt"
+        ],
+        "answer": "To disable the vehicle, first chock wheels and verify Park. Open the front trunk and remove the access panel. Cut both sides of the First Responder Loop to isolate the high‑voltage system; then disconnect the 12‑V supply if accessible. Treat airbags and pretensioners as energized for at least 3 minutes after power isolation. Refer to the ERG for the exact location for the specific model year.",
+        "images": [
+          "images/Tesla_Model_3/first_responder_loop.png",
+          "images/Tesla_Model_3/access_panel.png"
+        ]
+      },
+      "smoke_fire": {
+        "patterns": [
+          "smoking",
+          "smoke",
+          "fire",
+          "thermal runaway",
+          "battery fire",
+          "overheat"
+        ],
+        "answer": "If the battery is overheating or the vehicle is smoking, create an exclusion zone and attack with large amounts of water directed at the battery pack. Cool until there is no off‑gassing or re‑ignition. Do not breach the pack. After extinguishment, monitor for re‑ignition and isolate the vehicle per ERG guidance."
+      }
+    }
+  }
+}
+

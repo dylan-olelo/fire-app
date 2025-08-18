@@ -26,6 +26,12 @@ MAX_PAGES_FROM_TEXT = int(os.environ.get("MAX_PAGES_FROM_TEXT", "8"))
 IMAGE_META_FILE = "image_meta.pkl"
 IMAGE_EMB_FILE = "image_embeddings.npy"
 
+# Performance/behavior toggles
+USE_HYDE = os.environ.get("USE_HYDE", "1") not in {"0", "false", "False"}
+ENABLE_SENTENCE_LINKS = os.environ.get("ENABLE_SENTENCE_LINKS", "0") in {"1", "true", "True"}
+ENABLE_CURATED_KB = os.environ.get("ENABLE_CURATED_KB", "1") not in {"0", "false", "False"}
+CURATED_KB_PATH = os.environ.get("CURATED_KB_PATH", "kb/curated_kb.json")
+
 # --- 1. Initialize Flask and Models ---
 app = Flask(__name__)
 
@@ -66,6 +72,21 @@ if IMAGE_FILTER_BACKEND == "clip":
         IMAGE_FILTER_BACKEND = "none"
 
 
+# ---- Lightweight caches & curated KB ----
+embedding_cache: dict[str, np.ndarray] = {}
+hyde_cache: dict[str, str] = {}
+answer_cache: dict[tuple[str, str], dict] = {}
+
+curated_kb = {}
+if ENABLE_CURATED_KB and os.path.exists(CURATED_KB_PATH):
+    try:
+        import json
+        with open(CURATED_KB_PATH, "r", encoding="utf-8") as f:
+            curated_kb = json.load(f)
+        print(f"Loaded curated KB from {CURATED_KB_PATH}")
+    except Exception as e:
+        print(f"Failed to load curated KB: {e}")
+
 def generate_text_via_openai(system_message: str, user_prompt: str, max_tokens: int) -> str:
     """Call OpenAI Chat Completions API to generate text deterministically."""
     api_key = os.environ.get("OPENAI_API_KEY")
@@ -89,16 +110,20 @@ def generate_text_via_openai(system_message: str, user_prompt: str, max_tokens: 
 
 
 def embed_query(text: str) -> np.ndarray:
+    # Simple in-memory caching for speed across repeated queries
+    if text in embedding_cache:
+        return embedding_cache[text]
     api_key = os.environ.get("OPENAI_API_KEY")
     if EMBEDDINGS_BACKEND == "local":
         vec = local_embedder.encode([text])
-        return np.array(vec, dtype=np.float32)
+        arr = np.array(vec, dtype=np.float32)
     else:
         if not api_key:
             raise RuntimeError("OPENAI_API_KEY environment variable is not set")
         resp = openai_client.embeddings.create(model=OPENAI_EMBEDDINGS_MODEL, input=[text])
-        vec = np.array([resp.data[0].embedding], dtype=np.float32)
-        return vec
+        arr = np.array([resp.data[0].embedding], dtype=np.float32)
+    embedding_cache[text] = arr
+    return arr
     
 def parse_source(source_str: str) -> tuple[str, int]:
     try:
@@ -186,27 +211,39 @@ def ask_question():
     target_model = data['model']
     print(f"Received question for model '{target_model}': {question}")
 
-    # --- STEP A: HYDE - Generate a hypothetical document ---
-    print("Generating hypothetical document for search via OpenAI API...")
-    hyde_user_prompt = (
-        f"Generate a concise, factual paragraph that answers the following question about the {target_model} "
-        f"as if it were from the vehicle's Emergency Response Guide.\n\n"
-        f"Question: {question}"
-    )
-    try:
-        hypothetical_doc = generate_text_via_openai(
-            system_message="You are a helpful assistant for fire fighters.",
-            user_prompt=hyde_user_prompt,
-            max_tokens=180,
-        )
-    except Exception as e:
-        return jsonify({"error": f"HyDE generation failed: {str(e)}"}), 500
-    print(f"HyDE Doc: {hypothetical_doc}")
+    # Quick full-response cache
+    cache_key = (target_model, question.strip())
+    if cache_key in answer_cache:
+        return jsonify(answer_cache[cache_key])
+
+    # --- STEP A: Optional HyDE for stronger recall ---
+    if USE_HYDE:
+        print("Generating hypothetical document for search via OpenAI API...")
+        if question in hyde_cache:
+            hypothetical_doc = hyde_cache[question]
+        else:
+            hyde_user_prompt = (
+                f"Generate a concise, factual paragraph that answers the following question about the {target_model} "
+                f"as if it were from the vehicle's Emergency Response Guide.\n\n"
+                f"Question: {question}"
+            )
+            try:
+                hypothetical_doc = generate_text_via_openai(
+                    system_message="You are a helpful assistant for fire fighters.",
+                    user_prompt=hyde_user_prompt,
+                    max_tokens=180,
+                )
+                hyde_cache[question] = hypothetical_doc
+            except Exception as e:
+                return jsonify({"error": f"HyDE generation failed: {str(e)}"}), 500
+        print(f"HyDE Doc: {hypothetical_doc}")
+        retrieval_text = hypothetical_doc
+    else:
+        retrieval_text = question
 
     # --- STEP B: RETRIEVE - Search using the HyDE document ---
-    print("Searching with HyDE document...")
-    # We now embed the HYPOTHETICAL document, not the original question (online embeddings)
-    search_embedding = embed_query(hypothetical_doc)
+    print("Searching index...")
+    search_embedding = embed_query(retrieval_text)
     
     # Ensure embedding dimensionality matches index
     if search_embedding.shape[1] != index.d:
@@ -255,58 +292,100 @@ def ask_question():
     if not context_text:
         return jsonify({"answer": "I could not find any relevant information for that model, even with an expanded search. Please try rephrasing your question.", "sources": [], "images": []})
 
-    # --- STEP C: SYNTHESIZE - Generate the final answer ---
-    print("Generating final answer via OpenAI API...")
-    system_prompt = """You are an expert assistant for fire fighters. Your task is to answer the fire fighter's original question based ONLY on the provided text from the vehicle's Emergency Response Guide. Be clear, concise, and prioritize immediate safety actions. If the information isn't in the provided text, say "The provided guide does not contain that information." Do not make anything up. Structure your answer with clear steps if possible."""
+    # --- STEP C: Fast curated KB path (optional) ---
+    selected_images: list[str] = []
+    curated_hit = None
+    if ENABLE_CURATED_KB and curated_kb:
+        def norm(s: str) -> str:
+            return ''.join(c.lower() if c.isalnum() or c.isspace() else ' ' for c in s).strip()
+        qn = norm(question)
+        model_kb = curated_kb.get(target_model, {})
+        intents = (model_kb or {}).get("intents", {})
+        for intent_name, entry in intents.items():
+            patterns = [p.lower() for p in entry.get("patterns", [])]
+            if any(p in qn for p in patterns):
+                curated_hit = entry
+                selected_images = [p for p in entry.get("images", [])]
+                break
 
-    final_user_prompt = (
-        f"Original Question: {question}\n\n"
-        f"Emergency Guide Text:\n{context_text}\n\n"
-        f"Provide the best possible answer now."
-    )
-    try:
-        final_answer = generate_text_via_openai(
-            system_message=system_prompt,
-            user_prompt=final_user_prompt,
-            max_tokens=600,
+    # --- STEP D: SYNTHESIZE - Generate the final answer ---
+    if curated_hit and curated_hit.get("answer"):
+        final_answer = curated_hit["answer"].strip()
+    else:
+        print("Generating final answer via OpenAI API...")
+        system_prompt = """You are an expert assistant for fire fighters. Your task is to answer the fire fighter's original question based ONLY on the provided text from the vehicle's Emergency Response Guide. Be clear, concise, and prioritize immediate safety actions. If the information isn't in the provided text, say "The provided guide does not contain that information." Do not make anything up. Structure your answer with clear steps if possible."""
+
+        final_user_prompt = (
+            f"Original Question: {question}\n\n"
+            f"Emergency Guide Text:\n{context_text}\n\n"
+            f"Provide the best possible answer now."
         )
-    except Exception as e:
-        return jsonify({"error": f"Answer generation failed: {str(e)}"}), 500
+        try:
+            final_answer = generate_text_via_openai(
+                system_message=system_prompt,
+                user_prompt=final_user_prompt,
+                max_tokens=600,
+            )
+        except Exception as e:
+            return jsonify({"error": f"Answer generation failed: {str(e)}"}), 500
     
     sentences = split_into_sentences(final_answer)
     inline = []
     used_rows = set()
 
-    for sent in sentences:
-        # sentence → best source (prefer pages we already retrieved)
-        best_link = None
-        try:
-            s_vec = embed_query(sent)
-            s_dist, s_idx = index.search(s_vec, 50)
-            for j in s_idx[0]:
-                ch = chunks[j]
-                if ch.get("model") != target_model:
-                    continue
-                pdf, page = get_pdf_page(ch)
-                if not expanded or (pdf, page) in expanded:
-                    best_link = build_doc_link(target_model, pdf, page)
-                    break
-        except Exception:
-            best_link = None
+    # If we have curated images, use them directly (fast, deterministic)
+    if selected_images:
+        for img in selected_images[:IMAGE_TOP_K]:
+            inline.append({"sentence": "relevant image", "image": img, "image_score": 1.0, "source_link": None})
+    else:
+        # Optionally compute per-sentence links (can be slow); default disabled
+        if ENABLE_SENTENCE_LINKS:
+            for sent in sentences:
+                best_link = None
+                try:
+                    s_vec = embed_query(sent)
+                    s_dist, s_idx = index.search(s_vec, 50)
+                    for j in s_idx[0]:
+                        ch = chunks[j]
+                        if ch.get("model") != target_model:
+                            continue
+                        pdf, page = get_pdf_page(ch)
+                        if not expanded or (pdf, page) in expanded:
+                            best_link = build_doc_link(target_model, pdf, page)
+                            break
+                except Exception:
+                    best_link = None
 
-        best_img = None
-        best_score = None
-        if candidate_rows:
+                best_img = None
+                best_score = None
+                if candidate_rows:
+                    remain = [r for r in candidate_rows if r not in used_rows]
+                    ranked_pairs = rank_images_for_text_with_scores(sent, remain)
+                    for row, score in ranked_pairs:
+                        if score >= IMAGE_MIN_SCORE:
+                            best_img = image_meta[row]["path"]
+                            best_score = round(float(score), 3)
+                            used_rows.add(row)
+                            break
+
+                inline.append({"sentence": sent, "image": best_img, "image_score": best_score, "source_link": best_link})
+        else:
+            # Single pass, score full answer against images found on nearby pages
             remain = [r for r in candidate_rows if r not in used_rows]
-            ranked_pairs = rank_images_for_text_with_scores(sent, remain)
+            ranked_pairs = rank_images_for_text_with_scores(final_answer, remain)
             for row, score in ranked_pairs:
-                if score >= IMAGE_MIN_SCORE:
-                    best_img = image_meta[row]["path"]
-                    best_score = round(float(score), 3)
+                if score >= IMAGE_MIN_SCORE and len(inline) < IMAGE_TOP_K:
+                    inline.append({
+                        "sentence": "relevant image",
+                        "image": image_meta[row]["path"],
+                        "image_score": round(float(score), 3),
+                        "source_link": None
+                    })
                     used_rows.add(row)
-                    break
-
-        inline.append({"sentence": sent, "image": best_img, "image_score": best_score, "source_link": best_link})
+            if not inline and remain:
+                # As a last resort, just return the first candidate image(s)
+                for r in remain[:IMAGE_TOP_K]:
+                    inline.append({"sentence": "image", "image": image_meta[r]["path"], "image_score": None, "source_link": None})
 
         # Build a compact debug preview to help tuning
     candidate_preview = []
@@ -340,18 +419,26 @@ def ask_question():
         "top_candidate_images": candidate_preview,
     }
 
-    top_sources = [ (pdf, page) for (pdf, page) in top_pages ][:3]
+    # If curated entry provides explicit source pages, prefer them
+    if curated_hit and curated_hit.get("pdf") and curated_hit.get("pages"):
+        pdf_name = curated_hit.get("pdf")
+        curated_pages = [(pdf_name, int(p)) for p in curated_hit.get("pages", []) if int(p) >= 1]
+        top_sources = curated_pages[:3]
+    else:
+        top_sources = [ (pdf, page) for (pdf, page) in top_pages ][:3]
     sources = [ f"{pdf}, page {page}" for (pdf, page) in top_sources ]
     source_links = [ build_doc_link(target_model, pdf, page) for (pdf, page) in top_sources ]
 
-    return jsonify({
+    resp_payload = {
         "answer": final_answer,
         "inline": inline,
         "images": [i["image"] for i in inline if i["image"]],
         "sources": sources,
         "source_links": source_links,
         "debug": debug_info
-    })
+    }
+    answer_cache[cache_key] = resp_payload
+    return jsonify(resp_payload)
 
 
 @app.route('/images/<path:filename>', methods=['GET'])

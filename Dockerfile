@@ -16,6 +16,15 @@ RUN mkdir -p /app/cache
 # Install all the Python libraries from your requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Provide env toggles with defaults (can be overridden)
+ENV USE_HYDE=1 \
+    ENABLE_SENTENCE_LINKS=0 \
+    ENABLE_CURATED_KB=1 \
+    FAISS_TYPE=HNSW \
+    HNSW_M=32 \
+    HNSW_EF_CONSTRUCTION=200 \
+    HNSW_EF_SEARCH=64
+
 RUN python download_models.py
 
 # --- NEW: PERMISSION FIX ---
