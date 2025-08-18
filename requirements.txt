@@ -1,10 +1,8 @@
 flask
 sentence-transformers
 faiss-cpu
-torch
-transformers
-accelerate
-bitsandbytes
+openai
 PyMuPDF
 numpy  
 gunicorn
+Pillow

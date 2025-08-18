@@ -1,10 +1,9 @@
 from sentence_transformers import SentenceTransformer
-from transformers import pipeline
 
-print("Downloading retriever model...")
+print("Downloading local retriever model for offline embeddings...")
 SentenceTransformer("all-MiniLM-L6-v2")
 
-print("Downloading generator model...")
-pipeline("text-generation", model="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
+print("Downloading CLIP model for image filtering...")
+SentenceTransformer("clip-ViT-B-32")
 
-print("All models downloaded and cached.")
+print("Done.")
