@@ -1,2 +1,8 @@
 create_index.py
 .venv
+faiss_index.bin
+text_chunks.pkl
+image_meta.pkl
+image_embeddings.npy
+.env
+.env.example

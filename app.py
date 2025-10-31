@@ -2,6 +2,7 @@ import faiss
 import pickle
 import os
 from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS  # Add CORS support
 from openai import OpenAI
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -17,7 +18,7 @@ OPENAI_EMBEDDINGS_MODEL = os.environ.get("EMBEDDINGS_MODEL", "text-embedding-3-s
 OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL")
 
 # Image filtering config for relevant visuals
-IMAGE_FILTER_BACKEND = os.environ.get("IMAGE_FILTER_BACKEND", "clip")  # clip | none
+IMAGE_FILTER_BACKEND = os.environ.get("IMAGE_FILTER_BACKEND", "none")  # clip | none
 CLIP_MODEL_NAME = os.environ.get("CLIP_MODEL_NAME", "clip-ViT-B-32")
 IMAGE_TOP_K = int(os.environ.get("IMAGE_TOP_K", "3"))
 IMAGE_MIN_SCORE = float(os.environ.get("IMAGE_MIN_SCORE", "0.28"))
@@ -27,13 +28,14 @@ IMAGE_META_FILE = "image_meta.pkl"
 IMAGE_EMB_FILE = "image_embeddings.npy"
 
 # Performance/behavior toggles
-USE_HYDE = os.environ.get("USE_HYDE", "1") not in {"0", "false", "False"}
+USE_HYDE = os.environ.get("USE_HYDE", "0") not in {"0", "false", "False"}
 ENABLE_SENTENCE_LINKS = os.environ.get("ENABLE_SENTENCE_LINKS", "0") in {"1", "true", "True"}
-ENABLE_CURATED_KB = os.environ.get("ENABLE_CURATED_KB", "1") not in {"0", "false", "False"}
+ENABLE_CURATED_KB = os.environ.get("ENABLE_CURATED_KB", "0") not in {"0", "false", "False"}
 CURATED_KB_PATH = os.environ.get("CURATED_KB_PATH", "kb/curated_kb.json")
 
 # --- 1. Initialize Flask and Models ---
 app = Flask(__name__)
+CORS(app)  # Enable CORS for mobile app integration
 
 print("Loading knowledge base...")
 index = faiss.read_index(INDEX_FILE)
@@ -163,16 +165,16 @@ def expand_pages(pages: list[tuple[str,int]], window: int) -> set[tuple[str,int]
                 out.add((pdf, p))
     return out
 
-def rank_images_for_text(text: str, candidate_rows: list[int]) -> list[int]:
-    if clip_model is None or image_emb is None or not candidate_rows:
-        return candidate_rows[:IMAGE_TOP_K]
-    q = clip_model.encode([text], convert_to_tensor=False, normalize_embeddings=True)[0]
-    q = np.asarray(q, dtype=np.float32)
-    cand = image_emb[candidate_rows]          # (K, 512)
-    scores = cand @ q                         # cosine similarity (embeddings are normalized)
-    order = np.argsort(-scores)
-    ranked = [candidate_rows[i] for i in order if scores[i] >= IMAGE_MIN_SCORE]
-    return ranked[:IMAGE_TOP_K]
+# def rank_images_for_text(text: str, candidate_rows: list[int]) -> list[int]:
+#     if clip_model is None or image_emb is None or not candidate_rows:
+#         return candidate_rows[:IMAGE_TOP_K]
+#     q = clip_model.encode([text], convert_to_tensor=False, normalize_embeddings=True)[0]
+#     q = np.asarray(q, dtype=np.float32)
+#     cand = image_emb[candidate_rows]          # (K, 512)
+#     scores = cand @ q                         # cosine similarity (embeddings are normalized)
+#     order = np.argsort(-scores)
+#     ranked = [candidate_rows[i] for i in order if scores[i] >= IMAGE_MIN_SCORE]
+#     return ranked[:IMAGE_TOP_K]
 
 def rank_images_for_text_with_scores(text: str, candidate_rows: list[int]) -> list[tuple[int, float]]:
     if clip_model is None or image_emb is None or not candidate_rows:
@@ -241,7 +243,7 @@ def ask_question():
     else:
         retrieval_text = question
 
-    # --- STEP B: RETRIEVE - Search using the HyDE document ---
+    # --- STEP B: RETRIEVE - Search using the retrieval_text (could be HyDE or original question) document ---
     print("Searching index...")
     search_embedding = embed_query(retrieval_text)
     
@@ -458,6 +460,11 @@ def serve_doc(filename: str):
         sanitized = sanitized[len('documents/'):]
     return send_from_directory('documents', sanitized)
 
+
+@app.route('/health', methods=['GET'])
+def health_check():
+    """Health check endpoint for load balancers and monitoring"""
+    return jsonify({"status": "healthy", "service": "fire-app-api"})
 
 @app.route('/', methods=['GET'])
 def debug_page():

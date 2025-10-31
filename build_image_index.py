@@ -10,8 +10,8 @@ IMAGE_EMB_FILE = "image_embeddings.npy"
 
 # Tuning knobs
 CLIP_MODEL_NAME = os.environ.get("CLIP_MODEL_NAME", "clip-ViT-B-32")
-MIN_W = int(os.environ.get("IMG_MIN_W", "120"))
-MIN_H = int(os.environ.get("IMG_MIN_H", "120"))
+MIN_W = int(os.environ.get("IMG_MIN_W", "200"))
+MIN_H = int(os.environ.get("IMG_MIN_H", "200"))
 COMMON_HASH_FREQ = int(os.environ.get("IMG_COMMON_HASH_FREQ", "6"))
 
 def sha1_bytes(b: bytes) -> str:
