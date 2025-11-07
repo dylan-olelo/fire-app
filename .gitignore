@@ -6,3 +6,4 @@ image_meta.pkl
 image_embeddings.npy
 .env
 .env.example
+z_DEPRECIATED/
