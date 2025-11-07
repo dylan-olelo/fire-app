@@ -1,2087 +1,543 @@
 {
-    "TESLA Model 3": {
+    "Cybertruck Rescue Sheet": {
         "intents": {
             "disable_high_voltage": {
                 "patterns": [
-                    "how to disable high voltage in Model 3",
-                    "what steps to cut high voltage power in Tesla Model 3",
-                    "how to cut power in Model 3",
-                    "how to deactivate high voltage system in Tesla",
-                    "how to disable electric system in Model 3",
-                    "what is the procedure to cut high voltage in Tesla Model 3",
-                    "how to ensure Model 3 is de-powered",
-                    "how to cut the first responder loop in Model 3",
-                    "how to disable the high voltage battery in Tesla",
-                    "what to do to cut power in Tesla Model 3"
-                ],
-                "answer": "To disable high voltage in the Model 3, access the first responder loop under the hood or behind the rear quarter side window. Double cut the first responder loop and remove the cut section. Additionally, double cut the negative cables to the low voltage battery and wait 2 minutes for the vehicle to finish de-powering.",
-                "pages": [
-                    9,
-                    10,
-                    11
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "extricate_trapped_person": {
-                "patterns": [
-                    "how to rescue a trapped person in Model 3",
-                    "what to do for extrication in Tesla Model 3",
-                    "how to access occupants in Model 3 after an accident",
-                    "how to open doors in Model 3 for rescue",
-                    "what are the steps to free someone trapped in a Tesla",
-                    "how to get someone out of a Tesla Model 3",
-                    "how to perform extrication on Model 3",
-                    "how to access the cabin of a Model 3",
-                    "what tools are needed for extrication in Tesla Model 3",
-                    "how to open the trunk in Model 3 for rescue"
-                ],
-                "answer": "To access occupants in the Model 3, if the doors are locked or difficult to operate, use the mechanical release handle located near the window for front doors or the mechanical release cable for rear doors. If necessary, extrication may be required due to severe damage.",
-                "pages": [
-                    17,
-                    18
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "disable_charging_vehicle": {
-                "patterns": [
-                    "how to disable charging in Tesla Model 3",
-                    "what to do if Tesla is charging during an emergency",
-                    "how to unplug charging cable from Model 3",
-                    "how to stop charging in Tesla Model 3",
-                    "what steps to take to disable charging in Model 3",
-                    "how to handle a charging Tesla in an emergency",
-                    "how to disconnect charging in Model 3",
-                    "how to disable the charging system in Tesla",
-                    "what to do if charging cable is stuck in Model 3",
-                    "how to safely unplug a charging Tesla"
-                ],
-                "answer": "To disable a charging vehicle, unplug the charging cable. If you cannot unplug it, turn off power to the charging station. Then, proceed with disabling procedures by double cutting the first responder loop.",
-                "pages": [
-                    12,
-                    13
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "access_low_voltage_battery": {
-                "patterns": [
-                    "how to access low voltage battery in Model 3",
-                    "where is the low voltage battery in Tesla Model 3",
-                    "how to reach low voltage battery in Model 3",
-                    "what to do to access low voltage battery in Tesla",
-                    "how to open the access panel for low voltage battery",
-                    "how to disable low voltage battery in Model 3",
-                    "how to cut low voltage battery cables in Tesla",
-                    "where to find low voltage battery in Model 3",
-                    "how to handle low voltage battery in Tesla",
-                    "what are the steps to access low voltage battery"
-                ],
-                "answer": "To access the low voltage battery, open the vehicle's hood and locate the access panel next to the windshield. Remove the access panel to reach the low voltage battery.",
-                "pages": [
-                    12,
-                    27
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "handle_fire_incident": {
-                "patterns": [
-                    "how to handle a fire in Tesla Model 3",
-                    "what to do if Model 3 catches fire",
-                    "how to extinguish a fire in Tesla",
-                    "what steps to take for a battery fire in Model 3",
-                    "how to cool down a Tesla battery fire",
-                    "how to fight a fire in Tesla Model 3",
-                    "what to use to extinguish fire in Model 3",
-                    "how to manage fire risks in Tesla Model 3",
-                    "how to prevent fire re-ignition in Tesla",
-                    "what are the firefighting procedures for Model 3"
-                ],
-                "answer": "In case of a fire, use large amounts of water to cool the battery. It may take between 3,000-8,000 gallons of water to fully extinguish a battery fire. Monitor the battery temperature for at least 24 hours and do not submerge the vehicle to extinguish the fire.",
-                "pages": [
-                    28,
-                    29
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "transport_vehicle": {
-                "patterns": [
-                    "how to transport Tesla Model 3",
-                    "what are the towing procedures for Model 3",
-                    "how to safely tow a Tesla Model 3",
-                    "what to do when transporting Model 3",
-                    "how to load Model 3 onto a flatbed",
-                    "how to ensure safe transport of Tesla",
-                    "what are the guidelines for towing Model 3",
-                    "how to use dollies for transporting Tesla",
-                    "how to prepare Model 3 for transport",
-                    "what to avoid when transporting Model 3"
-                ],
-                "answer": "When transporting the Model 3, always ensure all four tires are off the ground. Use a roll-back truck or flatbed for transport. If using dollies, ensure the tires cannot spin to prevent damage.",
-                "pages": [
-                    31,
-                    32
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "open_hood": {
-                "patterns": [
-                    "how to open the hood of Model 3",
-                    "what to do to access the frunk in Tesla",
-                    "how to release the hood latch in Model 3",
-                    "how to open Tesla Model 3 hood without power",
-                    "how to access the front trunk in Model 3",
-                    "what steps to take to open hood in Tesla",
-                    "how to manually open the hood of Model 3",
-                    "how to access the frunk area in Tesla",
-                    "how to open the hood with external power",
-                    "how to unlock the hood of Model 3"
-                ],
-                "answer": "To open the hood, touch the associated OPEN button on the touchscreen if low voltage power is available. If not, use an external power supply to connect to the vehicle's terminals to release the hood latches.",
-                "pages": [
-                    20,
-                    21
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "open_trunk": {
-                "patterns": [
-                    "how to open the trunk of Model 3",
-                    "what to do to access the trunk in Tesla",
-                    "how to unlock the trunk in Model 3",
-                    "how to open rear trunk in Tesla Model 3",
-                    "how to access the trunk area in Model 3",
-                    "how to open trunk without power in Tesla",
-                    "how to release trunk latch in Model 3",
-                    "what steps to take to open trunk in Tesla",
-                    "how to open the trunk with low voltage power",
-                    "how to manually open the trunk of Model 3"
-                ],
-                "answer": "To open the trunk, use the touchscreen to touch the associated OPEN button or press the switch located under the exterior handle on the trunk.",
-                "pages": [
-                    19,
-                    20
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "monitor_battery_temperature": {
-                "patterns": [
-                    "how to monitor battery temperature in Tesla",
-                    "what to do to check battery temperature after fire",
-                    "how to use thermal imaging camera on Tesla",
-                    "how to ensure battery is cool in Model 3",
-                    "how to monitor high voltage battery temperature",
-                    "what steps to take for battery temperature monitoring",
-                    "how to check for hot spots in Tesla battery",
-                    "how to use TIC for battery monitoring",
-                    "how to ensure safety after battery fire",
-                    "what to do to prevent battery re-ignition"
-                ],
-                "answer": "Use a Thermal Imaging Camera (TIC) to monitor the battery temperature during the cooling process. Continue monitoring until the battery has reached ambient temperatures or below.",
-                "pages": [
-                    28,
-                    29
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "handle_submersion": {
-                "patterns": [
-                    "what to do if Model 3 is submerged",
-                    "how to handle a submerged Tesla",
-                    "how to rescue a submerged Model 3",
-                    "what steps to take for a submerged Tesla",
-                    "how to manage a waterlogged Model 3",
-                    "how to disable a submerged Tesla",
-                    "how to extract a submerged Model 3",
-                    "what precautions to take with submerged Tesla",
-                    "how to deal with a submerged electric vehicle",
-                    "how to handle water rescue for Tesla Model 3"
-                ],
-                "answer": "Treat a submerged Model 3 like any other submerged vehicle. Remove it from the water and complete normal disabling procedures. Raise the front of the vehicle to allow water to drain out.",
-                "pages": [
-                    30,
-                    31
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "cut_first_responder_loop": {
-                "patterns": [
-                    "how to cut the first responder loop in Model 3",
-                    "what steps to take to cut first responder loop",
-                    "how to disable airbags in Tesla Model 3",
-                    "how to access first responder loop in Tesla",
-                    "what to do to cut first responder loop safely",
-                    "how to perform first responder loop cut",
-                    "what is the procedure for cutting first responder loop",
-                    "how to ensure safety when cutting first responder loop",
-                    "how to disable low voltage power in Model 3",
-                    "how to cut the loop in Tesla Model 3"
-                ],
-                "answer": "To cut the first responder loop, access it under the hood or behind the rear quarter side window. Double cut the loop and remove the cut section to disable the low voltage power to the airbag circuit.",
-                "pages": [
-                    10,
-                    11
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "lift_vehicle": {
-                "patterns": [
-                    "how to lift Model 3 safely",
-                    "what are the lifting points for Tesla Model 3",
-                    "how to stabilize Model 3 during rescue",
-                    "how to lift Tesla without damaging battery",
-                    "what tools to use for lifting Model 3",
-                    "how to safely manipulate Model 3",
-                    "how to lift Tesla Model 3 for rescue",
-                    "what are the precautions for lifting Model 3",
-                    "how to use designated lift areas in Tesla",
-                    "how to avoid damaging high voltage battery when lifting"
-                ],
-                "answer": "When lifting or stabilizing the Model 3, only use the designated lift areas shown in green. Be careful not to damage the high voltage battery located under the floor pan.",
-                "pages": [
-                    8,
-                    9
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "avoid_no_cut_zones": {
-                "patterns": [
-                    "what are no-cut zones in Model 3",
-                    "how to identify no-cut zones in Tesla",
-                    "what areas should not be cut in Model 3",
-                    "how to avoid cutting hazards in Tesla Model 3",
-                    "what are the risks of cutting no-cut zones",
-                    "how to recognize no-cut zones in Tesla",
-                    "what to do to prevent injury in no-cut zones",
-                    "how to handle no-cut zones in Model 3",
-                    "what are the dangers of cutting in no-cut zones",
-                    "how to safely navigate around no-cut zones"
-                ],
-                "answer": "No-cut zones in the Model 3 are areas with high voltage, gas struts, or other hazards. Never cut or crush in these areas to avoid serious injury or death.",
-                "pages": [
-                    22,
-                    23
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "handle_airbag_deployment": {
-                "patterns": [
-                    "what to do after airbag deployment in Model 3",
-                    "how to handle deployed airbags in Tesla",
-                    "what are the risks of airbag deployment in Model 3",
-                    "how to ensure safety after airbag deployment",
-                    "what steps to take for airbag deployment in Tesla",
-                    "how to manage risks after airbag deployment",
-                    "how to access airbags in Model 3",
-                    "what precautions to take with deployed airbags",
-                    "how to disable airbags in Tesla Model 3",
-                    "what to do if airbags have deployed"
-                ],
-                "answer": "After airbag deployment, the high voltage system is deactivated. However, always assume that high voltage may still be present in the cables. Avoid cutting any orange high voltage cables.",
-                "pages": [
-                    14,
-                    15
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "monitor_high_voltage_components": {
-                "patterns": [
-                    "how to check high voltage components in Model 3",
-                    "what to do to ensure high voltage safety in Tesla",
-                    "how to monitor high voltage systems in Tesla Model 3",
-                    "what are the risks of high voltage components",
-                    "how to handle high voltage components in Tesla",
-                    "what precautions to take with high voltage systems",
-                    "how to ensure safety around high voltage components",
-                    "how to identify high voltage hazards in Model 3",
-                    "what steps to take for high voltage monitoring",
-                    "how to manage risks with high voltage systems"
-                ],
-                "answer": "Always assume that all high voltage components are energized. Use appropriate PPE and avoid cutting or touching any high voltage components to prevent serious injury or death.",
-                "pages": [
-                    24,
-                    25
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            },
-            "use_personal_protective_equipment": {
-                "patterns": [
-                    "what PPE to use for Tesla Model 3 emergencies",
-                    "how to protect yourself during Tesla rescue",
-                    "what personal protective equipment is needed for Model 3",
-                    "how to ensure safety with PPE in Tesla emergencies",
-                    "what are the PPE requirements for Tesla Model 3",
-                    "how to select appropriate PPE for Tesla rescue",
-                    "what safety gear to wear for Model 3 emergencies",
-                    "how to use PPE effectively in Tesla situations",
-                    "what precautions to take with PPE in Tesla",
-                    "how to ensure safety with personal protective equipment"
-                ],
-                "answer": "Always wear appropriate personal protective equipment (PPE) when handling Model 3 in an emergency situation to prevent serious injury or death.",
-                "pages": [
-                    32,
-                    33
-                ],
-                "pdf": "2024-Model-3-Emergency-Response-Guide_en.pdf"
-            }
-        }
-    },
-    "TESLA Model Y": {
-        "intents": {
-            "disable_high_voltage": {
-                "patterns": [
-                    "how to disable high voltage in Model Y",
-                    "what steps to cut power in Tesla Model Y",
-                    "how to cut the first responder loop",
-                    "how to de-power a Tesla Model Y",
-                    "what is the procedure to disable high voltage",
-                    "how to ensure Model Y is safe after an accident",
-                    "how to cut power to the battery in Model Y",
-                    "what to do to disable electrical systems in Model Y",
-                    "how to access the first responder loop",
-                    "how to safely disable a Tesla Model Y"
-                ],
-                "answer": "To disable high voltage in the Model Y, access the First Responder Loop under the hood or behind the rear quarter side window. Double cut the First Responder Loop and remove the cut section. Additionally, double cut the negative cables to the low voltage battery and wait 2 minutes for the vehicle to finish de-powering.",
-                "pages": [
-                    9,
-                    10,
-                    11
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "extricate_trapped_person": {
-                "patterns": [
-                    "how to rescue a trapped person in Model Y",
-                    "what to do if someone is stuck in a Tesla Model Y",
-                    "how to access occupants in a Tesla Model Y",
-                    "how to open doors after an accident",
-                    "what are the steps for extrication from Model Y",
-                    "how to get someone out of a Tesla Model Y",
-                    "how to open doors manually in Model Y",
-                    "how to release trapped occupants in Model Y",
-                    "what to do if doors won't open in Model Y",
-                    "how to access the cabin of a Tesla Model Y"
-                ],
-                "answer": "To access occupants in a Model Y after a collision, if the doors do not unlock, manually open a front door by reaching inside the window and using the mechanical release handle. For rear doors, slide your finger into the slot at the bottom of the rear door pocket to remove the cover and pull the mechanical release cable forward.",
-                "pages": [
-                    17,
-                    18
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "disable_charging": {
-                "patterns": [
-                    "how to disable charging in Tesla Model Y",
-                    "what to do if the charging cable is stuck",
-                    "how to unplug charging cable from Model Y",
-                    "how to disable a charging vehicle",
-                    "what steps to take to stop charging in Model Y",
-                    "how to manually release charging cable",
-                    "how to disconnect charging cable safely",
-                    "how to handle a charging emergency in Model Y",
-                    "what to do if charging station is locked",
-                    "how to turn off charging in Tesla Model Y"
-                ],
-                "answer": "To disable charging, unplug the charging cable. If unable to unplug, turn off power to the charging station. Then, proceed with disabling procedures by double cutting the First Responder Loop.",
-                "pages": [
-                    12,
-                    13
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "fire_response": {
-                "patterns": [
-                    "how to respond to a fire in Tesla Model Y",
-                    "what to do if Model Y catches fire",
-                    "how to extinguish a battery fire in Model Y",
-                    "what is the fire response for Tesla Model Y",
-                    "how to cool down a Tesla battery fire",
-                    "how to fight a fire in an electric vehicle",
-                    "what steps to take for a fire in Model Y",
-                    "how to use water on a Tesla fire",
-                    "how to monitor battery temperature after a fire",
-                    "what precautions to take during a fire in Model Y"
-                ],
-                "answer": "In case of a fire, use large amounts of water to cool the battery. It can take 3,000-8,000 gallons of water to fully extinguish a battery fire. Monitor the battery temperature for at least 24 hours after suppression. Do not submerge the vehicle to extinguish the fire.",
-                "pages": [
-                    28,
-                    29
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "submersion_response": {
-                "patterns": [
-                    "how to handle a submerged Tesla Model Y",
-                    "what to do if Model Y is submerged in water",
-                    "how to rescue a submerged electric vehicle",
-                    "what steps to take for a waterlogged Model Y",
-                    "how to disable a submerged Model Y",
-                    "how to transport a submerged Tesla",
-                    "what precautions for submerged electric vehicles",
-                    "how to drain water from Model Y",
-                    "how to assess a submerged Model Y",
-                    "what to do after a Model Y is submerged"
-                ],
-                "answer": "Treat a submerged Model Y like any other submerged vehicle. Remove it from the water and complete normal disabling procedures. Raise the front of the vehicle approximately 30 cm (1 foot) to allow water to drain out.",
-                "pages": [
-                    30,
-                    31
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "towing_procedure": {
-                "patterns": [
-                    "how to tow a Tesla Model Y",
-                    "what is the towing procedure for Model Y",
-                    "how to transport a Model Y safely",
-                    "what to do when towing a Tesla",
-                    "how to ensure safe transport of Model Y",
-                    "how to use a flatbed for Model Y",
-                    "what precautions for towing Model Y",
-                    "how to load Model Y onto a tow truck",
-                    "how to prevent damage while towing Model Y",
-                    "what are the towing guidelines for Tesla Model Y"
-                ],
-                "answer": "Always transport the Model Y with all four tires off the ground. Use a roll-back truck or flatbed. If using dollies, ensure all wheels are off the ground. Never transport with tires in a position where they can spin.",
-                "pages": [
-                    31,
-                    32
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "access_low_voltage_battery": {
-                "patterns": [
-                    "how to access low voltage battery in Model Y",
-                    "where is the low voltage battery in Tesla Model Y",
-                    "how to cut low voltage battery cables",
-                    "what to do to access low voltage battery",
-                    "how to disable low voltage system in Model Y",
-                    "how to reach low voltage battery safely",
-                    "what are the steps to access low voltage battery",
-                    "how to handle low voltage battery in Model Y",
-                    "how to disconnect low voltage battery safely",
-                    "what precautions for low voltage battery access"
-                ],
-                "answer": "To access the low voltage battery, open the hood and remove the access panel next to the windshield. The negative battery cable should be double cut to open the low voltage battery circuit.",
-                "pages": [
-                    12,
-                    27
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "manual_door_release": {
-                "patterns": [
-                    "how to manually open doors in Model Y",
-                    "what to do if doors won't open in Tesla Model Y",
-                    "how to access doors without power in Model Y",
-                    "how to use mechanical release in Model Y",
-                    "how to open front doors manually in Model Y",
-                    "how to open rear doors without power in Model Y",
-                    "what steps to take for manual door release",
-                    "how to operate door handles in Model Y",
-                    "how to release doors after an accident",
-                    "what to do if power is lost in Model Y"
-                ],
-                "answer": "To manually open front doors without power, lift the mechanical release handle located near the window switches. For rear doors, slide your finger into the slot at the bottom of the rear door pocket to remove the cover and pull the mechanical release cable forward.",
-                "pages": [
-                    17,
-                    18
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "high_voltage_safety": {
-                "patterns": [
-                    "how to handle high voltage components in Model Y",
-                    "what precautions for high voltage in Tesla Model Y",
-                    "how to avoid high voltage hazards in Model Y",
-                    "what to do around high voltage battery",
-                    "how to safely work with high voltage in Model Y",
-                    "what are the risks of high voltage in Tesla",
-                    "how to identify high voltage areas in Model Y",
-                    "what safety gear for high voltage response",
-                    "how to treat high voltage components",
-                    "what to do if high voltage is suspected"
-                ],
-                "answer": "Always assume that all high voltage components are energized. Wear appropriate PPE and avoid cutting or crushing high voltage components. Treat every orange cable and battery pack as if there is high voltage present.",
-                "pages": [
-                    9,
-                    10,
-                    23
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "airbag_deployment": {
-                "patterns": [
-                    "what happens when airbags deploy in Model Y",
-                    "how to handle deployed airbags in Tesla",
-                    "what to do after airbag deployment in Model Y",
-                    "how to ensure safety after airbags deploy",
-                    "what precautions for airbags in Tesla Model Y",
-                    "how to access airbags after deployment",
-                    "what are the risks of deployed airbags",
-                    "how to manage airbag hazards in Model Y",
-                    "what steps to take after airbag deployment",
-                    "how to respond to airbag deployment in Tesla"
-                ],
-                "answer": "When airbags deploy, the high voltage system is deactivated. However, always assume that high voltage may still be present in the cables and components. The First Responder Loop should be cut to open the low voltage circuit that powers the airbags.",
-                "pages": [
-                    14,
-                    15
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "stored_energy_management": {
-                "patterns": [
-                    "how to manage stored energy in Model Y",
-                    "what to do with battery cells after an accident",
-                    "how to handle battery leaks in Tesla Model Y",
-                    "what are the risks of stored energy in Model Y",
-                    "how to assess battery condition after a collision",
-                    "what precautions for battery management in Tesla",
-                    "how to deal with battery electrolyte leaks",
-                    "what steps to take for battery safety in Model Y",
-                    "how to monitor battery temperature after an incident",
-                    "what to do if battery is compromised in Model Y"
-                ],
-                "answer": "The high voltage battery contains stored energy and should never be breached. If compromised, handle with caution and monitor for leaks. Always treat the battery as if it is live and take appropriate safety measures.",
-                "pages": [
-                    24,
-                    25
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "lifting_stabilization": {
-                "patterns": [
-                    "how to lift a Tesla Model Y safely",
-                    "what are the stabilization points for Model Y",
-                    "how to stabilize Model Y during rescue",
-                    "what precautions for lifting Model Y",
-                    "how to avoid damaging battery while lifting",
-                    "what are the safe lifting areas for Model Y",
-                    "how to use lifting tools on Model Y",
-                    "what to do when stabilizing Model Y",
-                    "how to ensure safety while lifting Model Y",
-                    "what are the risks of lifting Model Y"
-                ],
-                "answer": "When lifting or stabilizing the Model Y, only use the designated lift areas shown in green. Avoid damaging the high voltage battery located under the floor pan. Ensure that responders are trained and equipped for safe lifting.",
-                "pages": [
-                    8,
-                    9
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "no_cut_zones": {
-                "patterns": [
-                    "what are no-cut zones in Model Y",
-                    "how to identify no-cut areas in Tesla Model Y",
-                    "what precautions for cutting Model Y",
-                    "how to avoid cutting hazards in Model Y",
-                    "what are the risks of cutting in no-cut zones",
-                    "how to handle no-cut zones safely",
-                    "what to do around no-cut zones in Model Y",
-                    "how to recognize no-cut zones in Tesla",
-                    "what are the dangers of cutting in no-cut zones",
-                    "how to ensure safety around no-cut zones"
-                ],
-                "answer": "No-cut zones in the Model Y are areas where high voltage, gas struts, or other hazards are present. Cutting or crushing in these areas can result in serious injury or death. Always use appropriate tools and PPE.",
-                "pages": [
-                    22,
-                    23
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "high_voltage_battery_management": {
-                "patterns": [
-                    "how to manage high voltage battery in Model Y",
-                    "what to do if high voltage battery is damaged",
-                    "how to handle battery fires in Tesla Model Y",
-                    "what are the risks of high voltage battery",
-                    "how to assess high voltage battery condition",
-                    "what precautions for high voltage battery management",
-                    "how to monitor high voltage battery temperature",
-                    "what steps to take for battery safety in Model Y",
-                    "how to deal with battery overheating",
-                    "what to do if battery is compromised in Model Y"
-                ],
-                "answer": "The high voltage battery is located under the floor pan and is always energized. Never breach the battery pack and handle with caution. Monitor for overheating and treat all high voltage components as live.",
-                "pages": [
-                    24,
-                    25
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            },
-            "first_responder_communication": {
-                "patterns": [
-                    "how to contact Tesla for emergencies",
-                    "what is the support for first responders",
-                    "how to reach Tesla Roadside Assistance",
-                    "what resources are available for first responders",
-                    "how to get help for Tesla emergencies",
-                    "what to do in case of Tesla emergency",
-                    "how to communicate with Tesla during an incident",
-                    "what are the contact details for Tesla support",
-                    "how to access Tesla emergency resources",
-                    "what information to provide to Tesla in emergencies"
-                ],
-                "answer": "First responders can contact Tesla Roadside Assistance for emergencies. Refer to the Tesla website for applicable numbers and resources for first responders.",
-                "pages": [
-                    32,
-                    33
-                ],
-                "pdf": "2025-Model-Y-Emergency-Response-Guide.pdf"
-            }
-        }
-    },
-    "TESLA MODEL S": {
-        "intents": {
-            "disable_high_voltage": {
-                "patterns": [
-                    "how to disable high voltage in Tesla Model S",
-                    "what steps to cut high voltage power in Model S",
-                    "how to disconnect high voltage battery in Model S",
-                    "how to turn off high voltage system in Tesla Model S",
-                    "what is the procedure to disable high voltage in Model S",
-                    "how do I cut the first responder loop in Model S",
-                    "how to ensure high voltage is off in Tesla Model S",
-                    "what to do to disable high voltage in Model S",
-                    "how to safely cut high voltage in Model S",
-                    "how to isolate high voltage battery in Tesla Model S"
-                ],
-                "answer": "To disable high voltage, first open the hood and remove the access panel. Then, double cut the first responder loop and remove the cut section. Always wear appropriate PPE and treat all high voltage components as energized.",
-                "pages": [
-                    9,
-                    10
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "extricate_trapped_person": {
-                "patterns": [
-                    "how to extricate a person from Tesla Model S",
-                    "what to do if someone is trapped in Model S",
-                    "how to access occupants in a Model S after an accident",
-                    "how to get someone out of a Tesla Model S",
-                    "what are the steps for extricating a person from Model S",
-                    "how to open doors in Model S for rescue",
-                    "how to rescue someone from a Tesla Model S",
-                    "what to do to free a trapped person in Model S",
-                    "how to access the cabin of Model S in an emergency",
-                    "how to open Model S doors without power"
-                ],
-                "answer": "To extricate a trapped person, if the doors do not unlock, you may need to manually open a front door by reaching inside the window and using the mechanical release handle. For rear doors, access the mechanical release cables by folding back the carpet below the rear seats.",
-                "pages": [
-                    12,
-                    13
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "disable_low_voltage": {
-                "patterns": [
-                    "how to disable low voltage battery in Model S",
-                    "what steps to cut low voltage power in Tesla Model S",
-                    "how to disconnect low voltage battery in Model S",
-                    "how to turn off low voltage system in Tesla Model S",
-                    "what is the procedure to disable low voltage in Model S",
-                    "how do I cut the negative battery cable in Model S",
-                    "how to ensure low voltage is off in Tesla Model S",
-                    "what to do to disable low voltage in Model S",
-                    "how to safely cut low voltage in Model S",
-                    "how to isolate low voltage battery in Tesla Model S"
-                ],
-                "answer": "To disable the low voltage battery, locate the negative battery cable under the access panel next to the windshield and double cut it to open the low voltage battery circuit. Ensure not to contact both terminals during this process.",
-                "pages": [
-                    11,
-                    10
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "access_occupants": {
-                "patterns": [
-                    "how to access occupants in Tesla Model S",
-                    "what to do to get inside a Model S after an accident",
-                    "how to open doors in Model S for rescue",
-                    "how to unlock Model S doors in an emergency",
-                    "what are the steps to access the cabin of Model S",
-                    "how to open Model S doors without power",
-                    "how to manually open doors in Model S",
-                    "how to get into a Tesla Model S after a crash",
-                    "how to rescue someone from a Tesla Model S",
-                    "how to open the liftgate in Model S"
-                ],
-                "answer": "To access the occupants, if the doors do not unlock, manually open a front door by reaching inside the window and using the mechanical release handle. For rear doors, pull the release cables located under the carpet below the rear seats.",
-                "pages": [
-                    12,
-                    13,
-                    14
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "fire_response": {
-                "patterns": [
-                    "how to extinguish a fire in Tesla Model S",
-                    "what to do if Model S catches fire",
-                    "how to handle a battery fire in Model S",
-                    "how to cool down a Tesla Model S battery fire",
-                    "what steps to take for fire in Model S",
-                    "how to fight a fire in Tesla Model S",
-                    "how to use water on a Model S fire",
-                    "what to do during a fire incident with Model S",
-                    "how to monitor battery temperature after fire in Model S",
-                    "how to prevent battery re-ignition in Model S"
-                ],
-                "answer": "In case of a fire, use large amounts of water to cool the battery. Monitor the battery temperature for at least 24 hours. Do not submerge the vehicle in water. If water is not available, use CO2 or dry chemicals until water can be applied.",
-                "pages": [
-                    26,
-                    27
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "towing_procedure": {
-                "patterns": [
-                    "how to tow a Tesla Model S",
-                    "what is the towing procedure for Model S",
-                    "how to transport a Model S safely",
-                    "how to use a flatbed for towing Model S",
-                    "what to do when towing a Tesla Model S",
-                    "how to ensure Model S is towed correctly",
-                    "how to prepare Model S for towing",
-                    "what are the towing guidelines for Model S",
-                    "how to lift Model S for transport",
-                    "how to use dollies for towing Model S"
-                ],
-                "answer": "To tow a Model S, always transport with all four tires off the ground. Use a flatbed truck or ensure the tires are unable to spin. If using dollies, ensure they do not exceed the manufacturer's speed rating.",
-                "pages": [
-                    29,
-                    30
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "submersion_response": {
-                "patterns": [
-                    "how to handle a submerged Tesla Model S",
-                    "what to do if Model S is submerged",
-                    "how to rescue from a submerged Model S",
-                    "how to disable a submerged Model S",
-                    "what steps to take for a submerged Model S",
-                    "how to remove water from Model S after submersion",
-                    "how to access occupants in a submerged Model S",
-                    "how to deal with electric shock risk in submerged Model S",
-                    "how to handle submerged electric vehicles",
-                    "what precautions for submerged Model S"
-                ],
-                "answer": "Treat a submerged Model S like any other submerged vehicle. Remove it from the water and continue with normal high voltage disabling procedures. Be cautious of potential fire risks from the high voltage battery.",
-                "pages": [
-                    28,
-                    29
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "lift_vehicle": {
-                "patterns": [
-                    "how to lift a Tesla Model S safely",
-                    "what are the lifting points for Model S",
-                    "how to stabilize a Model S during rescue",
-                    "how to use jacks on a Model S",
-                    "what precautions when lifting Model S",
-                    "how to avoid damaging battery while lifting Model S",
-                    "how to lift Model S without compromising battery",
-                    "what tools to use for lifting Model S",
-                    "how to stabilize Model S for rescue",
-                    "how to safely manipulate Model S during rescue"
-                ],
-                "answer": "When lifting a Model S, only use the designated lift areas to avoid damaging the high voltage battery. Ensure that first responders are trained and equipped to handle the vehicle safely.",
-                "pages": [
-                    8,
-                    9
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "monitor_battery_temperature": {
-                "patterns": [
-                    "how to monitor battery temperature in Model S",
-                    "what tools to use for checking battery temperature after fire",
-                    "how to use thermal imaging camera on Model S",
-                    "how to ensure battery is cool in Model S",
-                    "what to do after a fire in Model S",
-                    "how to check for battery re-ignition risk",
-                    "how to assess battery condition after fire",
-                    "how to monitor high voltage battery temperature",
-                    "what steps to take for battery temperature monitoring",
-                    "how to prevent battery overheating in Model S"
-                ],
-                "answer": "Use a thermal imaging camera to monitor the battery temperature after a fire. Continue to apply water until the battery reaches ambient temperatures. Ensure no fire or smoke is present before releasing the vehicle.",
-                "pages": [
-                    27,
-                    26
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "personal_protective_equipment": {
-                "patterns": [
-                    "what PPE is needed for Tesla Model S emergencies",
-                    "how to protect myself when responding to Model S incidents",
-                    "what safety gear for Tesla Model S rescue",
-                    "how to stay safe during Model S emergencies",
-                    "what precautions to take when handling Model S",
-                    "how to use PPE for Model S incidents",
-                    "what is the required PPE for Tesla Model S",
-                    "how to ensure safety when dealing with Model S",
-                    "what protective equipment for Tesla Model S",
-                    "how to prepare for Tesla Model S emergencies"
-                ],
-                "answer": "Always wear appropriate personal protective equipment (PPE) when handling a Model S in an emergency situation. This includes insulated tools and gear suitable for electrical hazards.",
-                "pages": [
-                    31
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "no_cut_zones": {
-                "patterns": [
-                    "what are no-cut zones in Tesla Model S",
-                    "how to identify no-cut areas in Model S",
-                    "what to avoid cutting in Model S",
-                    "how to handle no-cut zones in Tesla Model S",
-                    "what are the risks of cutting in no-cut zones",
-                    "how to recognize no-cut zones in Model S",
-                    "what areas are dangerous to cut in Model S",
-                    "how to safely navigate no-cut zones in Model S",
-                    "what to do around no-cut zones in Tesla Model S",
-                    "how to avoid hazards in Model S during rescue"
-                ],
-                "answer": "No-cut zones in the Model S are areas where high voltage, gas struts, or other hazards are present. Never cut or crush in these areas to avoid serious injury or death.",
-                "pages": [
-                    21,
-                    22
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "high_voltage_warning": {
-                "patterns": [
-                    "how to handle high voltage warnings in Model S",
-                    "what to do if high voltage is present in Model S",
-                    "how to respond to high voltage hazards in Tesla Model S",
-                    "what precautions for high voltage in Model S",
-                    "how to ensure safety around high voltage Model S",
-                    "what are the risks of high voltage in Model S",
-                    "how to identify high voltage components in Model S",
-                    "what safety measures for high voltage in Model S",
-                    "how to protect against high voltage in Tesla Model S",
-                    "what to do during high voltage incidents in Model S"
-                ],
-                "answer": "Always assume that all high voltage components are energized. Use insulated tools and wear appropriate PPE when handling or working near high voltage components.",
-                "pages": [
-                    31
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "airbag_deployment": {
-                "patterns": [
-                    "what happens when airbags deploy in Model S",
-                    "how to respond after airbag deployment in Tesla Model S",
-                    "what to do if airbags have deployed in Model S",
-                    "how to handle airbag hazards in Model S",
-                    "what are the risks after airbag deployment in Model S",
-                    "how to ensure safety after airbag deployment in Tesla Model S",
-                    "what precautions to take with deployed airbags in Model S",
-                    "how to access vehicle after airbag deployment in Model S",
-                    "what to do with airbag inflators in Model S",
-                    "how to manage airbag risks in Tesla Model S"
-                ],
-                "answer": "After airbags deploy, the high voltage system is deactivated. However, treat all components as if they may still be energized. Do not touch the Restraint Control Module (RCM) within 10 seconds of deployment.",
-                "pages": [
-                    12,
-                    13
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "stored_energy": {
-                "patterns": [
-                    "how to handle stored energy in Model S",
-                    "what to do about battery energy in Tesla Model S",
-                    "how to manage risks of stored energy in Model S",
-                    "what precautions for stored energy in Model S",
-                    "how to ensure safety with stored energy in Model S",
-                    "what are the risks of stored energy in Tesla Model S",
-                    "how to deal with battery energy in Model S",
-                    "what to do if battery is compromised in Model S",
-                    "how to assess stored energy risks in Model S",
-                    "what steps to take for stored energy in Tesla Model S"
-                ],
-                "answer": "The high voltage battery contains stored energy. Always treat it as energized, and do not breach the battery pack or high voltage cables with rescue tools.",
-                "pages": [
-                    22,
-                    23
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            },
-            "high_voltage_cable": {
-                "patterns": [
-                    "how to handle high voltage cables in Model S",
-                    "what to do if high voltage cables are damaged in Model S",
-                    "how to identify high voltage cables in Tesla Model S",
-                    "what precautions for high voltage cables in Model S",
-                    "how to ensure safety around high voltage cables in Model S",
-                    "what are the risks of cutting high voltage cables in Model S",
-                    "how to protect against high voltage cable hazards in Model S",
-                    "what to do during incidents with high voltage cables in Model S",
-                    "how to manage high voltage cable risks in Tesla Model S",
-                    "what steps to take for high voltage cables in Model S"
-                ],
-                "answer": "High voltage cables are marked in orange. Never cut or compromise these cables with rescue tools, as they may be energized and pose a serious risk.",
-                "pages": [
-                    24,
-                    25
-                ],
-                "pdf": "model_s_emergency_response_guide.pdf"
-            }
-        }
-    },
-    "TESLA MODEL X": {
-        "intents": {
-            "disable_high_voltage": {
-                "patterns": [
-                    "how to disable high voltage in Model X",
-                    "what steps to cut power in Tesla Model X",
-                    "how to disconnect high voltage battery in Model X",
-                    "how to disable the electrical system in Model X",
-                    "what is the first responder loop in Model X",
-                    "how to cut the first responder loop in Tesla Model X",
-                    "how to ensure high voltage is off in Model X",
-                    "how to safely disable power in Model X",
-                    "what to do to cut power in Tesla Model X",
-                    "how to handle high voltage in Tesla Model X"
-                ],
-                "answer": "To disable high voltage in the Model X, double cut the first responder loop and remove the cut section. Then, disable the 12V battery by cutting the negative cable. Always wear appropriate PPE and treat all high voltage components as energized.",
-                "pages": [
-                    9,
-                    10
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "extricate_trapped_person": {
-                "patterns": [
-                    "how to extricate a person from Tesla Model X",
-                    "what to do if someone is trapped in Model X",
-                    "how to access occupants in Tesla Model X",
-                    "how to open doors of Model X after an accident",
-                    "what are the steps to rescue someone from Model X",
-                    "how to get someone out of a Tesla Model X",
-                    "how to open falcon wing doors in Model X",
-                    "how to manually open doors in Model X",
-                    "how to access the cabin of Model X after a crash",
-                    "how to free trapped occupants in Tesla Model X"
-                ],
-                "answer": "To extricate a trapped person from the Model X, if the doors do not unlock, you may need to manually open a front door using the mechanical release handle. For falcon wing doors, remove the speaker grill and pull the mechanical release cable to open them manually.",
-                "pages": [
-                    12,
-                    15
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "access_occupants": {
-                "patterns": [
-                    "how to access occupants in Tesla Model X",
-                    "what to do to get inside Model X after a crash",
-                    "how to open Model X doors after an accident",
-                    "how to rescue people from Model X",
-                    "how to open falcon wing doors in an emergency",
-                    "how to manually unlock Model X doors",
-                    "how to get into Tesla Model X after a collision",
-                    "how to open front doors of Model X",
-                    "how to access the cabin of Model X",
-                    "how to open the liftgate of Model X"
-                ],
-                "answer": "To access the occupants of the Model X, if the doors do not unlock, manually open a front door using the mechanical release handle. For the liftgate, pull the cable to release the latch and push it open.",
-                "pages": [
-                    12,
-                    20
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "handle_fire": {
-                "patterns": [
-                    "how to extinguish a fire in Tesla Model X",
-                    "what to do if Model X battery catches fire",
-                    "how to fight a battery fire in Model X",
-                    "how to cool down a Tesla Model X battery fire",
-                    "what is the procedure for a fire in Model X",
-                    "how to use water on Model X fire",
-                    "how to manage fire risk in Tesla Model X",
-                    "how to handle fire in electric vehicles",
-                    "what to do during a fire in Model X",
-                    "how to prevent battery re-ignition in Model X"
-                ],
-                "answer": "In case of a fire, use large amounts of water to cool the battery. Monitor the battery temperature for at least 24 hours. Do not submerge the vehicle in water. Always treat the vehicle as energized during firefighting.",
-                "pages": [
-                    29,
-                    30
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "disable_12V_battery": {
-                "patterns": [
-                    "how to disable the 12V battery in Model X",
-                    "what steps to cut the 12V battery in Tesla Model X",
-                    "how to disconnect 12V power in Model X",
-                    "how to cut power to the 12V system in Model X",
-                    "how to handle the 12V battery in Tesla Model X",
-                    "how to disable electrical systems in Model X",
-                    "what to do to cut 12V battery in Model X",
-                    "how to safely disconnect 12V battery in Model X",
-                    "how to access the 12V battery in Model X",
-                    "how to remove the 12V battery from Model X"
-                ],
-                "answer": "To disable the 12V battery, access it under the hood and double cut the negative battery cable. Ensure not to touch both terminals simultaneously.",
-                "pages": [
-                    11
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "stabilize_vehicle": {
-                "patterns": [
-                    "how to stabilize Tesla Model X",
-                    "what are the stabilization points for Model X",
-                    "how to immobilize Model X after an accident",
-                    "how to chock wheels in Model X",
-                    "how to ensure Model X is stable",
-                    "what to do to stabilize Model X",
-                    "how to lift Model X safely",
-                    "how to prevent Model X from moving",
-                    "how to secure Model X during rescue",
-                    "how to stabilize a Tesla Model X"
-                ],
-                "answer": "To stabilize the Model X, chock the wheels and ensure the vehicle is in Park. Use designated lift areas to avoid damaging the high voltage battery.",
-                "pages": [
-                    7,
-                    8
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "towing_procedure": {
-                "patterns": [
-                    "how to tow Tesla Model X",
-                    "what is the towing procedure for Model X",
-                    "how to transport Model X safely",
-                    "how to use a flatbed for Model X",
-                    "what to do when towing Model X",
-                    "how to lift Model X for towing",
-                    "how to transport Model X without damage",
-                    "how to ensure Model X is towed correctly",
-                    "how to use dollies for Model X towing",
-                    "what are the towing precautions for Model X"
-                ],
-                "answer": "To tow the Model X, always transport it with all four tires off the ground. Use a roll-back truck or ensure the vehicle is in Transport Mode if using dollies.",
-                "pages": [
-                    32,
-                    33
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "monitor_battery_temperature": {
-                "patterns": [
-                    "how to monitor battery temperature in Model X",
-                    "what to do to check battery temperature after fire",
-                    "how to use thermal imaging camera on Model X",
-                    "how to ensure battery is cool in Model X",
-                    "how to check for battery re-ignition risk in Model X",
-                    "how to monitor high voltage battery temperature",
-                    "what are the signs of overheating in Model X battery",
-                    "how to assess battery condition after fire",
-                    "how to use TIC on Model X",
-                    "how to ensure safety after Model X fire"
-                ],
-                "answer": "Use a thermal imaging camera to monitor the battery temperature after a fire. Ensure there is no fire, smoke, or audible sounds for at least 45 minutes before releasing the vehicle.",
-                "pages": [
-                    30
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "handle_submersion": {
-                "patterns": [
-                    "what to do if Model X is submerged",
-                    "how to handle a submerged Tesla Model X",
-                    "how to rescue from a submerged Model X",
-                    "what are the steps for submerged Model X",
-                    "how to deal with water rescue for Model X",
-                    "how to extract Model X from water",
-                    "how to disable high voltage in submerged Model X",
-                    "how to manage risks with submerged Model X",
-                    "how to safely remove Model X from water",
-                    "what precautions for submerged Model X"
-                ],
-                "answer": "Treat a submerged Model X like any other submerged vehicle. Remove it from the water and follow normal high voltage disabling procedures.",
-                "pages": [
-                    31
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "cut_first_responder_loop": {
-                "patterns": [
-                    "how to cut the first responder loop in Model X",
-                    "what is the procedure for cutting first responder loop",
-                    "how to disable airbags in Model X",
-                    "how to access first responder loop in Tesla Model X",
-                    "what to do to cut first responder loop",
-                    "how to safely cut first responder loop",
-                    "how to handle the first responder loop in Model X",
-                    "how to ensure safety when cutting first responder loop",
-                    "what are the steps to cut first responder loop",
-                    "how to remove first responder loop section"
-                ],
-                "answer": "To cut the first responder loop, locate it on the passenger side of the vehicle, double cut it, and remove the cut section to disable the 12V power to the airbag circuit.",
-                "pages": [
-                    9,
-                    10
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "avoid_no_cut_zones": {
-                "patterns": [
-                    "what are no cut zones in Model X",
-                    "how to identify no cut zones in Tesla Model X",
-                    "how to avoid cutting in no cut zones",
-                    "what areas are no cut zones in Model X",
-                    "how to handle rescue without cutting no cut zones",
-                    "what to do in no cut zones of Model X",
-                    "how to work around no cut zones in Model X",
-                    "how to safely navigate no cut zones",
-                    "what precautions for no cut zones in Model X",
-                    "how to identify hazards in Model X"
-                ],
-                "answer": "No cut zones in the Model X are areas with high voltage components or hazards. Always avoid cutting or crushing in these areas to prevent serious injury.",
-                "pages": [
-                    24
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "use_protective_equipment": {
-                "patterns": [
-                    "what PPE to wear for Model X emergencies",
-                    "how to protect myself during Model X rescue",
-                    "what personal protective equipment for Model X",
-                    "how to ensure safety in Model X emergencies",
-                    "what safety gear for Tesla Model X",
-                    "how to stay safe during Model X incident",
-                    "what precautions to take with Model X",
-                    "how to use PPE in Model X rescue",
-                    "what are the safety measures for Model X",
-                    "how to handle Model X safely"
-                ],
-                "answer": "Always wear appropriate personal protective equipment (PPE) when handling the Model X in emergencies, including insulated gloves and eye protection.",
-                "pages": [
-                    34
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "cut_high_voltage_cables": {
-                "patterns": [
-                    "how to cut high voltage cables in Model X",
-                    "what to do if I need to cut orange cables in Model X",
-                    "how to handle high voltage cables in Tesla Model X",
-                    "what are the risks of cutting high voltage cables",
-                    "how to safely manage high voltage cables in Model X",
-                    "what precautions for cutting high voltage cables",
-                    "how to avoid cutting high voltage cables",
-                    "how to identify high voltage cables in Model X",
-                    "what to do with damaged high voltage cables",
-                    "how to handle rescue with high voltage cables"
-                ],
-                "answer": "Never cut or compromise high voltage cables in the Model X. Always assume they are energized and treat them with caution.",
-                "pages": [
-                    27
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "handle_airbags": {
-                "patterns": [
-                    "how to handle airbags in Model X",
-                    "what to do if airbags deploy in Tesla Model X",
-                    "how to manage airbag risks in Model X",
-                    "how to ensure safety with deployed airbags",
-                    "what precautions for airbags in Model X",
-                    "how to access airbags in Tesla Model X",
-                    "what to do with airbag inflators in Model X",
-                    "how to deal with airbag deployment in Model X",
-                    "how to safely manage airbag systems",
-                    "what are the risks of deployed airbags"
-                ],
-                "answer": "If airbags have deployed, the high voltage system will be deactivated. However, always treat the vehicle as energized and avoid contact with any high voltage components.",
-                "pages": [
-                    12,
-                    13
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "handle_stored_gas": {
-                "patterns": [
-                    "how to manage stored gas in Model X",
-                    "what to do with gas inflators in Tesla Model X",
-                    "how to handle gas cylinders in Model X",
-                    "what precautions for stored gas in Model X",
-                    "how to avoid gas hazards in Model X",
-                    "how to safely manage gas inflators",
-                    "what are the risks of cutting gas cylinders",
-                    "how to deal with gas struts in Model X",
-                    "how to ensure safety with gas inflators",
-                    "what to do if gas inflators are damaged"
-                ],
-                "answer": "Never cut or crush inflation cylinders in the Model X, as this can cause catastrophic failure. Always handle them with care to avoid injury.",
-                "pages": [
-                    13
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            },
-            "lift_vehicle_safely": {
-                "patterns": [
-                    "how to lift Tesla Model X safely",
-                    "what are the lifting points for Model X",
-                    "how to stabilize Model X when lifting",
-                    "how to avoid damaging battery when lifting Model X",
-                    "what tools to use for lifting Model X",
-                    "how to ensure safety when lifting Model X",
-                    "how to lift Model X without damaging it",
-                    "what precautions for lifting Model X",
-                    "how to handle lifting operations for Model X",
-                    "how to stabilize Model X during lifting"
-                ],
-                "answer": "When lifting the Model X, only use designated lift areas to avoid damaging the high voltage battery. Ensure that responders are trained and equipped for lifting operations.",
-                "pages": [
-                    8,
-                    26
-                ],
-                "pdf": "2016_Model_X_Emergency_Response_Guide_en.pdf"
-            }
-        }
-    },
-    "TESLA CYBERTRUCK": {
-        "intents": {
-            "disable_high_voltage": {
-                "patterns": [
-                    "how to disable high voltage in Cybertruck",
-                    "turn off high voltage system in Tesla Cybertruck",
-                    "how to cut power in Tesla Cybertruck",
-                    "disable HV battery in Cybertruck",
-                    "shut down high voltage in Tesla Cybertruck",
-                    "how to disconnect high voltage battery Cybertruck",
-                    "turn off HV system in Tesla Cybertruck",
-                    "how to immobilize Cybertruck",
-                    "steps to disable high voltage in Cybertruck",
-                    "how to safely cut power in Tesla Cybertruck"
-                ],
-                "answer": "Open the hood, double cut the First Responder Loop, and disconnect the 48V battery.",
-                "pages": [
-                    2
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "extricate_trapped_person": {
-                "patterns": [
-                    "how to extricate a person from Cybertruck",
-                    "get someone out of a Tesla Cybertruck",
-                    "rescue trapped occupant in Cybertruck",
-                    "how to open doors after a crash in Cybertruck",
-                    "extrication methods for Tesla Cybertruck",
-                    "how to access occupants in Cybertruck",
-                    "open Cybertruck doors without power",
-                    "how to free trapped individuals in Cybertruck",
-                    "steps for occupant rescue in Tesla Cybertruck",
-                    "how to handle trapped passengers in Cybertruck"
-                ],
-                "answer": "After a collision, the doors may not unlock from the outside. Extrication may be required.",
-                "pages": [
+                    "how to disable the high voltage system in the Cybertruck",
+                    "disable HV battery in Tesla Cybertruck emergency",
+                    "cut power to high voltage circuits Cybertruck",
+                    "how to shut down HV system after crash",
+                    "where is the HV battery disconnect in Cybertruck",
+                    "do not cut HV cables Cybertruck procedure",
+                    "disable electrical hazards in Cybertruck rescue",
+                    "how to prevent HV shock when extricating",
+                    "Cybertruck HV safe shutdown steps",
+                    "HV battery safety procedure for first responders",
+                    "how to de-energize the Cybertruck high voltage system",
+                    "where to cut power safely in Cybertruck",
+                    "HV safety steps for rescue in Cybertruck",
+                    "what to do to disable HV before extrication",
+                    "how to kill HV power in Cybertruck after collision"
+                ],
+                "answer": "Disabling direct HV hazards: Open the hood and locate the First Responder Loop. Double cut the First Responder Loop to interrupt HV power. Then disconnect the 48V battery. Do not cut or open the high voltage cables themselves. After disabling, ensure all power sources are isolated and proceed with safe extrication using PPE. If vehicle is submerged or damaged, monitor HV battery temperature and maintain no direct contact with orange-insulated cables. Do not push on HV battery. Keep a clear, safe perimeter and avoid energizing components during stabilization.",
+                "pages": [
+                    2,
                     3
                 ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 2,
+                        "desc": "Disabling HV hazards: First Responder Loop and 48V battery disconnect",
+                        "highlight": {
+                            "x": 331.97119140625,
+                            "y": 108.19239807128906,
+                            "w": 267.8172607421875,
+                            "h": 150.6457977294922
+                        }
+                    },
+                    {
+                        "page": 3,
+                        "desc": "Do not cut HV components; orange insulation on cables",
+                        "highlight": {
+                            "x": 140.0930938720703,
+                            "y": 499.7702941894531,
+                            "w": 79.78071594238281,
+                            "h": 51.287628173828125
+                        }
+                    },
+                    {
+                        "page": 4,
+                        "desc": "High voltage hazard warning and PPE reminder",
+                        "highlight": {
+                            "x": 371.7731018066406,
+                            "y": 61.521514892578125,
+                            "w": 148.56002807617188,
+                            "h": 48.200469970703125
+                        }
+                    }
+                ]
             },
-            "monitor_battery_temperature": {
+            "avoid_hv_cable_cutting": {
                 "patterns": [
-                    "how to check battery temperature in Cybertruck",
-                    "monitor HV battery temperature in Tesla Cybertruck",
-                    "check temperature of high voltage battery Cybertruck",
-                    "how to assess battery heat in Cybertruck",
-                    "steps to monitor battery temperature in Tesla Cybertruck",
-                    "how to ensure battery safety in Cybertruck",
-                    "check ambient temperature of Cybertruck battery",
-                    "how to monitor battery after fire in Cybertruck",
-                    "how to assess HV battery temperature",
-                    "monitoring procedures for Cybertruck battery"
-                ],
-                "answer": "Monitor HV battery ambient temperature for at least 24 hours after a fire incident.",
-                "pages": [
-                    4
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "cool_battery_fire": {
-                "patterns": [
-                    "how to cool battery fire in Cybertruck",
-                    "extinguish battery fire in Tesla Cybertruck",
-                    "cooling procedures for Cybertruck battery fire",
-                    "how to handle battery fire in Cybertruck",
-                    "steps to cool down Cybertruck battery",
-                    "how to use water on Cybertruck battery fire",
-                    "cooling methods for Tesla Cybertruck battery",
-                    "how to manage battery fire in Cybertruck",
-                    "how to extinguish fire in Cybertruck battery",
-                    "what to do for battery fire in Tesla Cybertruck"
-                ],
-                "answer": "Use large amounts of water to cool the battery enclosure from the bottom of the vehicle. Use of firefighting foam is not recommended.",
-                "pages": [
-                    4
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "avoid_submerging_vehicle": {
-                "patterns": [
-                    "should I submerge Cybertruck to extinguish fire",
-                    "can I cool battery fire by submerging Cybertruck",
-                    "is it safe to submerge Tesla Cybertruck",
-                    "how to handle submerged Cybertruck",
-                    "what to do if Cybertruck is submerged",
-                    "should I put Cybertruck underwater",
-                    "submersion risks for Tesla Cybertruck",
-                    "how to manage submerged vehicle in water",
-                    "can I use water rescue on Cybertruck",
-                    "what happens if Cybertruck is submerged"
-                ],
-                "answer": "Do not submerge the vehicle to extinguish/cool battery fire; possible battery re-ignition.",
-                "pages": [
-                    4
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "use_personal_protective_equipment": {
-                "patterns": [
-                    "what PPE to wear for Cybertruck rescue",
-                    "personal protective equipment for Tesla Cybertruck",
-                    "safety gear for handling Cybertruck",
-                    "appropriate PPE for Cybertruck emergency",
-                    "how to protect myself during Cybertruck rescue",
-                    "what safety equipment is needed for Cybertruck",
-                    "PPE guidelines for Tesla Cybertruck",
-                    "how to stay safe during Cybertruck incident",
-                    "recommended PPE for Cybertruck first responders",
-                    "safety measures for Cybertruck emergencies"
-                ],
-                "answer": "Always wear appropriate personal protective equipment (PPE) when handling the Cybertruck.",
-                "pages": [
-                    2
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "identify_high_voltage_components": {
-                "patterns": [
-                    "how to identify high voltage components in Cybertruck",
-                    "recognize HV components in Tesla Cybertruck",
-                    "what do high voltage cables look like in Cybertruck",
-                    "how to find high voltage parts in Cybertruck",
-                    "identification of HV components in Tesla Cybertruck",
-                    "how to spot high voltage areas in Cybertruck",
-                    "recognizing orange insulated cables in Cybertruck",
-                    "how to locate high voltage battery in Cybertruck",
-                    "identifying hazards in Tesla Cybertruck",
-                    "what to look for in Cybertruck high voltage system"
-                ],
-                "answer": "All high voltage cables have orange insulation. Not every high voltage component is labeled.",
-                "pages": [
-                    3
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "handle_collision_damage": {
-                "patterns": [
-                    "what to do after a collision with Cybertruck",
-                    "how to assess damage in Tesla Cybertruck",
-                    "collision response for Cybertruck",
-                    "how to handle Cybertruck after an accident",
-                    "steps for dealing with collision in Cybertruck",
-                    "how to check for injuries in Cybertruck",
-                    "what to do if Cybertruck is in an accident",
-                    "how to manage collision aftermath in Cybertruck",
-                    "collision safety procedures for Tesla Cybertruck",
-                    "how to respond to Cybertruck crash"
-                ],
-                "answer": "Electrical and mechanical releases may be compromised after a collision. The seats and steering wheel may not function.",
-                "pages": [
-                    3
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "open_doors_without_power": {
-                "patterns": [
-                    "how to open Cybertruck doors without electricity",
-                    "manually open doors in Tesla Cybertruck",
-                    "how to access Cybertruck doors after crash",
-                    "open front door without power in Cybertruck",
-                    "how to unlock Cybertruck doors manually",
-                    "steps to open rear door without power in Cybertruck",
-                    "how to get into Cybertruck if power is out",
-                    "open Cybertruck doors in emergency",
-                    "how to access occupants in Cybertruck without power",
-                    "how to manually operate Cybertruck doors"
-                ],
-                "answer": "Opening the doors may require extrication as they may not unlock from the outside after a collision.",
-                "pages": [
-                    3
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "store_vehicle_after_fire": {
-                "patterns": [
-                    "how to store Cybertruck after fire incident",
-                    "where to keep Cybertruck after fire",
-                    "safe distance for storing Cybertruck post-fire",
-                    "how to handle Cybertruck after fire",
-                    "storing procedures for Cybertruck after fire",
-                    "what to do with Cybertruck after a fire",
-                    "how to secure Cybertruck after fire incident",
-                    "steps to store Cybertruck safely after fire",
-                    "how to manage Cybertruck post-fire",
-                    "where to place Cybertruck after fire"
-                ],
-                "answer": "After a fire incident, store the vehicle outside at a safe distance (at least 50 ft/15 m) from other vehicles and structures.",
-                "pages": [
-                    4
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "tilt_vehicle_for_water_drain": {
-                "patterns": [
-                    "how to drain water from submerged Cybertruck",
-                    "tilt Cybertruck to remove water",
-                    "how to manage water in Cybertruck",
-                    "drain procedures for submerged Tesla Cybertruck",
-                    "how to handle water in Cybertruck after submersion",
-                    "steps to tilt Cybertruck for water drainage",
-                    "how to get water out of Cybertruck",
-                    "what to do if Cybertruck is submerged in water",
-                    "how to remove water from Cybertruck",
-                    "how to manage submerged vehicle water"
-                ],
-                "answer": "Tilt the vehicle to the rear to allow water to drain out and store flat.",
-                "pages": [
-                    4
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "contact_tesla_assistance": {
-                "patterns": [
-                    "how to contact Tesla roadside assistance",
-                    "who to call for Tesla Cybertruck emergencies",
-                    "Tesla assistance hotline for Cybertruck",
-                    "how to reach Tesla for help with Cybertruck",
-                    "contact information for Tesla Cybertruck support",
-                    "how to get help for Cybertruck issues",
-                    "who to call for Cybertruck emergencies",
-                    "how to reach Tesla first responders",
-                    "contact Tesla for Cybertruck rescue",
-                    "how to get Tesla assistance for Cybertruck"
-                ],
-                "answer": "Tow providers with emergencies should call Tesla Roadside Assistance. Refer to https://www.tesla.com/roadside-assistance for applicable hotline number.",
-                "pages": [
-                    4
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "use_thermal_imagery_camera": {
-                "patterns": [
-                    "how to use thermal camera on Cybertruck",
-                    "thermal imagery for Tesla Cybertruck",
-                    "how to assess heat in Cybertruck with TIC",
-                    "using infrared camera on Cybertruck",
-                    "how to monitor temperature with thermal camera",
-                    "steps to use TIC on Cybertruck",
-                    "how to check for hot spots in Cybertruck",
-                    "thermal imaging procedures for Cybertruck",
-                    "how to utilize thermal camera for Cybertruck",
-                    "how to assess Cybertruck with infrared technology"
-                ],
-                "answer": "Use a thermal imagery camera (TIC) to monitor the battery temperature.",
-                "pages": [
-                    4
-                ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            },
-            "avoid_cutting_high_voltage": {
-                "patterns": [
+                    "should I cut HV cables in Cybertruck",
                     "can I cut high voltage cables in Cybertruck",
-                    "should I cut HV components in Tesla Cybertruck",
-                    "how to handle high voltage cables in Cybertruck",
-                    "what to do if I see high voltage in Cybertruck",
-                    "how to manage high voltage risks in Cybertruck",
-                    "cutting high voltage cables in Tesla Cybertruck",
-                    "how to safely handle HV components in Cybertruck",
-                    "is it safe to cut high voltage in Cybertruck",
-                    "what happens if I cut HV cables in Cybertruck",
-                    "how to avoid cutting high voltage in Cybertruck"
+                    "is it safe to cut or open HV components in Cybertruck",
+                    "HV cables cutting prohibition Cybertruck rescue",
+                    "why not cut orange insulated cables Cybertruck",
+                    "HV wiring safety rule Cybertruck"
                 ],
-                "answer": "Never cut or open high voltage components or cables.",
+                "answer": "Never cut or open high voltage components or cables. All high voltage cables have orange insulation and cutting these can cause severe injury or fire. Follow the disconnection steps for HV power and maintain PPE. If a collision has compromised energy systems, rely on the First Responder Loop and HV isolation steps instead of cutting cables.",
+                "pages": [
+                    2,
+                    3
+                ],
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 3,
+                        "desc": "Warning: Do not cut HV cables (orange insulation)",
+                        "highlight": {
+                            "x": 140.0930938720703,
+                            "y": 499.7702941894531,
+                            "w": 79.78071594238281,
+                            "h": 51.287628173828125
+                        }
+                    }
+                ]
+            },
+            "open_hood_and_access_loops": {
+                "patterns": [
+                    "how to open the hood in Cybertruck for disable",
+                    "open hood Cybertruck to access first responder loop",
+                    "Cybertruck hood access steps first responder",
+                    "where is the hood for HV loop access Cybertruck",
+                    "how to access first responder loop in Cybertruck",
+                    "opening hood to reach emergency controls Cybertruck"
+                ],
+                "answer": "Open the hood to access the First Responder Loop. This enables the initial HV isolation sequence and prepares for additional steps like the Loop double-cut and disconnection of the 48V battery. Ensure PPE is worn and avoid any contact with HV components.",
+                "pages": [
+                    2
+                ],
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 2,
+                        "desc": "Open hood to access first responder loop",
+                        "highlight": {
+                            "x": 331.97119140625,
+                            "y": 108.19239807128906,
+                            "w": 267.8172607421875,
+                            "h": 150.6457977294922
+                        }
+                    }
+                ]
+            },
+            "double_cut_first_responder_loop": {
+                "patterns": [
+                    "what is double cut of first responder loop Cybertruck",
+                    "how to double cut the first responder loop Cybertruck",
+                    "first responder loop double cut procedure",
+                    "instructions for double cut loop in Tesla Cybertruck",
+                    "where to cut the loop twice in HV safety"
+                ],
+                "answer": "Perform a double cut of the First Responder Loop to interrupt HV power. This is part of the HV disable method after opening the hood. After cutting, verify no HV energy remains before continuing with the 48V battery disconnection.",
+                "pages": [
+                    2
+                ],
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 2,
+                        "desc": "Double cut the First Responder Loop as HV isolation",
+                        "highlight": {
+                            "x": 331.97119140625,
+                            "y": 108.19239807128906,
+                            "w": 267.8172607421875,
+                            "h": 150.6457977294922
+                        }
+                    }
+                ]
+            },
+            "disconnect_48v_battery": {
+                "patterns": [
+                    "how to disconnect the 48V battery in Cybertruck",
+                    "48V battery disconnection Cybertruck rescue",
+                    "where is 48V battery and how to disconnect",
+                    "disable 48V power in Cybertruck",
+                    "step by step disconnect 48V in Cybertruck"
+                ],
+                "answer": "After the First Responder Loop is cut, disconnect the 48V battery as part of HV system isolation. Follow PPE requirements and ensure all power sources are isolated before continuing with stabilization or extrication.",
+                "pages": [
+                    2,
+                    3
+                ],
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 2,
+                        "desc": "Disconnect the 48V battery as part of HV isolation",
+                        "highlight": {
+                            "x": 331.97119140625,
+                            "y": 108.19239807128906,
+                            "w": 267.8172607421875,
+                            "h": 150.6457977294922
+                        }
+                    }
+                ]
+            },
+            "chock_wheels_and_stabilize": {
+                "patterns": [
+                    "how to chock wheels Cybertruck after crash",
+                    "stabilize Cybertruck on scene",
+                    "where to place wheel chocks Cybertruck",
+                    "stabilization points after intrusion Cybertruck",
+                    "lifting and stabilization Cybertruck procedure"
+                ],
+                "answer": "Chock wheels to prevent movement and establish a safe stabilization area. Identify appropriate lifting points for stabilization and arrange secure supports before any lifting or extrusion operations.",
+                "pages": [
+                    2
+                ],
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 2,
+                        "desc": "CHOCK WHEELS instruction",
+                        "highlight": {
+                            "x": 16.90134048461914,
+                            "y": 558.2396240234375,
+                            "w": 290.27648544311523,
+                            "h": 76.0682373046875
+                        }
+                    }
+                ]
+            },
+            "post_collision_doors_extrication_note": {
+                "patterns": [
+                    "do doors unlock from outside after Cybertruck collision",
+                    "extrication required after collision doors",
+                    "Cybertruck doors may not unlock from outside",
+                    "how to extricate occupants when doors won't open",
+                    "door functionality after crash Cybertruck"
+                ],
+                "answer": "After a collision doors may not unlock from outside; extrication may be required. Proceed with controlled access to occupants while ensuring HV isolation; wear PPE and use appropriate rescue tools.",
                 "pages": [
                     3
                 ],
-                "pdf": "Cybertruck-Rescue-Sheet.pdf"
-            }
-        }
-    },
-    "TESLA SUPERCHARGER": {
-        "intents": {
-            "disable_high_voltage": {
-                "patterns": [
-                    "how to disable high voltage in Tesla Supercharger",
-                    "what steps to take to cut high voltage power",
-                    "how to turn off high voltage components",
-                    "how do I disable the high voltage system",
-                    "what is the procedure for disabling high voltage",
-                    "how to safely cut power to Supercharger",
-                    "how to turn off electricity at Supercharger site",
-                    "what are the steps to disable high voltage",
-                    "how to ensure high voltage is off",
-                    "how to disconnect high voltage safely"
-                ],
-                "answer": "To disable high voltage, enter the locked enclosure, locate the main disconnect for the site, engage the E-stop if available, and turn the main feeder breaker and all downstream breakers to the OFF position.",
-                "pages": [
-                    20,
-                    21
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 3,
+                        "desc": "Doors may not unlock from outside after collision; extrication may be required",
+                        "highlight": {
+                            "x": 4.730472087860107,
+                            "y": 271.1675109863281,
+                            "w": 147.8491940498352,
+                            "h": 49.62188720703125
+                        }
+                    }
+                ]
             },
-            "extricate_trapped_person": {
+            "laminated_glass_and_broken_panes": {
                 "patterns": [
-                    "how to rescue a person trapped in a Tesla Supercharger",
-                    "what to do if someone is stuck near Supercharger",
-                    "how to safely extricate a trapped individual",
-                    "what steps to take for rescuing a trapped person",
-                    "how to handle a rescue situation at Supercharger",
-                    "how to get someone out from under Supercharger",
-                    "what is the procedure for extricating a trapped person",
-                    "how to assist a trapped individual safely",
-                    "how to perform a rescue at a Supercharger site",
-                    "what are the best practices for extricating someone"
+                    "what is the glass type Cybertruck windows",
+                    "how to handle glass after crash Cybertruck",
+                    "laminated glass warning Cybertruck rescue",
+                    "cutting or breaking windows Cybertruck guidelines",
+                    "glass handling safety in Cybertruck rescue"
                 ],
-                "answer": "Ensure the area is safe, disable high voltage if necessary, and follow standard rescue protocols to extricate the trapped person without risking further injury.",
-                "pages": [
-                    15
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "firefighting_procedures": {
-                "patterns": [
-                    "how to fight a fire at a Tesla Supercharger",
-                    "what to do in case of fire at Supercharger",
-                    "how to extinguish electrical fires at Supercharger",
-                    "what are the firefighting steps for Supercharger",
-                    "how to handle a fire emergency at Supercharger",
-                    "what equipment to use for Supercharger fire",
-                    "how to respond to a fire at Supercharger site",
-                    "what is the procedure for electrical fire at Supercharger",
-                    "how to deal with vehicle fires near Supercharger",
-                    "what are the fire response guidelines for Supercharger"
-                ],
-                "answer": "For fires involving Supercharger equipment, de-energize the site if possible, then use CO2 or appropriate electrical fire suppression methods. For vehicle fires, standard firefighting techniques can be applied.",
-                "pages": [
-                    16
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "turn_off_power_to_site": {
-                "patterns": [
-                    "how to turn off power to Supercharger site",
-                    "what steps to take to de-energize Supercharger",
-                    "how to disconnect power from Supercharger site",
-                    "how do I turn off electricity at Supercharger",
-                    "what is the procedure to shut down Supercharger power",
-                    "how to safely cut power to the entire site",
-                    "how to disable power at Supercharger location",
-                    "what are the steps to turn off Supercharger power",
-                    "how to ensure Supercharger site is de-energized",
-                    "how to perform a site-wide power shutdown"
-                ],
-                "answer": "To turn off power to the entire Supercharger site, enter the locked enclosure, locate the main disconnect, engage the E-stop if available, and turn off the main feeder breaker and all downstream breakers.",
-                "pages": [
-                    20,
-                    21
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "turn_off_power_to_cabinet": {
-                "patterns": [
-                    "how to turn off power to Supercharger cabinet",
-                    "what steps to take to disable a Supercharger cabinet",
-                    "how to disconnect power from a Supercharger cabinet",
-                    "how do I turn off electricity to a Supercharger cabinet",
-                    "what is the procedure to shut down a Supercharger cabinet",
-                    "how to safely cut power to a cabinet",
-                    "how to disable power at Supercharger cabinet",
-                    "what are the steps to turn off cabinet power",
-                    "how to ensure Supercharger cabinet is de-energized",
-                    "how to perform a cabinet power shutdown"
-                ],
-                "answer": "To turn off power to a Supercharger cabinet, you must first turn off power to the entire site via the main breaker, as the cabinet is connected to a shared DC bus.",
-                "pages": [
-                    22
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "identify_supercharger_variant": {
-                "patterns": [
-                    "how to identify Supercharger variant",
-                    "what are the different types of Superchargers",
-                    "how to tell which Supercharger model it is",
-                    "how to recognize Supercharger variants",
-                    "what are the Supercharger types",
-                    "how to differentiate between Supercharger models",
-                    "what is the procedure to identify Supercharger type",
-                    "how to find out the Supercharger version",
-                    "how to check Supercharger model",
-                    "what are the characteristics of Supercharger variants"
-                ],
-                "answer": "Supercharger systems have four main variants: V4, V3, V2, and Urban Supercharger. Identification can be done by examining the cabinet and charge post configurations.",
-                "pages": [
-                    8
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "safety_data_sheets": {
-                "patterns": [
-                    "where to find safety data sheets for Tesla products",
-                    "how to access Tesla SDS information",
-                    "what are the safety data sheets for Supercharger",
-                    "how to get SDS for Tesla equipment",
-                    "where can I find SDS for Supercharger systems",
-                    "how to obtain safety data sheets for Tesla",
-                    "what is the procedure to access SDS",
-                    "how to find SDS for Tesla Energy products",
-                    "where to look for Supercharger safety data sheets",
-                    "how to retrieve SDS for Tesla products"
-                ],
-                "answer": "Safety Data Sheets (SDS) for Tesla Energy products are not required under OSHA for articles. For specific projects in Australia or New Zealand, contact your Tesla representative for SDS.",
-                "pages": [
-                    8
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "personal_protective_equipment": {
-                "patterns": [
-                    "what PPE is required for Supercharger emergencies",
-                    "how to choose PPE for Tesla Supercharger",
-                    "what personal protective equipment to use at Supercharger",
-                    "how to ensure safety with PPE at Supercharger",
-                    "what are the PPE guidelines for Supercharger",
-                    "how to select appropriate PPE for Supercharger work",
-                    "what is the recommended PPE for Tesla emergencies",
-                    "how to use PPE safely around Supercharger",
-                    "what personal protective gear is needed for Supercharger",
-                    "how to ensure proper PPE usage at Supercharger"
-                ],
-                "answer": "Always wear appropriate personal protective equipment (PPE) when working around Supercharger equipment, including insulated tools if available.",
-                "pages": [
-                    5
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "site_disconnect_considerations": {
-                "patterns": [
-                    "what to consider when disconnecting power at Supercharger",
-                    "how to safely disconnect Supercharger site power",
-                    "what are the disconnect considerations for Supercharger",
-                    "how to handle power disconnection at Supercharger",
-                    "what steps to take for site disconnect at Supercharger",
-                    "how to ensure safe disconnection of Supercharger power",
-                    "what are the guidelines for disconnecting Supercharger site",
-                    "how to approach disconnecting power at Supercharger",
-                    "what to keep in mind when disconnecting Supercharger",
-                    "how to safely manage site disconnect at Supercharger"
-                ],
-                "answer": "Review all notes and warnings before attempting to disconnect power. Do not reset breakers or disconnect power via Supercharger cabinets; use branch breakers in the switchgear instead.",
-                "pages": [
-                    19
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "warning_labels": {
-                "patterns": [
-                    "what are the warning labels on Supercharger equipment",
-                    "how to identify warning labels at Supercharger",
-                    "what do the labels on Supercharger mean",
-                    "how to read warning labels on Tesla Supercharger",
-                    "what are the safety labels for Supercharger systems",
-                    "how to interpret warning labels on Supercharger",
-                    "what warnings are present on Supercharger equipment",
-                    "how to find warning labels on Tesla products",
-                    "what are the important labels on Supercharger",
-                    "how to ensure safety with warning labels at Supercharger"
-                ],
-                "answer": "Warning labels associated with high voltage equipment are present and may vary by region. Always check for these labels to ensure safety.",
-                "pages": [
-                    18
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "charging_status": {
-                "patterns": [
-                    "how to check charging status at Supercharger",
-                    "what indicates charging status on Tesla",
-                    "how to read charging status lights",
-                    "what do the colors mean on charging indicator",
-                    "how to determine if vehicle is charging",
-                    "what is the procedure to check charging status",
-                    "how to know if charging is active",
-                    "how to interpret charging status indicators",
-                    "what are the signs of charging status",
-                    "how to assess charging status at Supercharger"
-                ],
-                "answer": "The charging status of the vehicle can be seen by the color of the indicator next to the plug, which indicates different states of charging.",
-                "pages": [
-                    17
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "contact_information": {
-                "patterns": [
-                    "how to contact Tesla for emergencies",
-                    "what is the Tesla emergency contact number",
-                    "how to reach Tesla support for Supercharger issues",
-                    "what are the contact details for Tesla emergencies",
-                    "how to get in touch with Tesla for Supercharger",
-                    "what is the procedure to contact Tesla",
-                    "how to find Tesla emergency contacts",
-                    "what are the Tesla support numbers",
-                    "how to reach Tesla for urgent assistance",
-                    "what is the best way to contact Tesla"
-                ],
-                "answer": "For emergencies, do not use the company contact numbers provided. Instead, call CHEMTREC for hazardous materials incidents or refer to the Tesla Fire Responders page for specific contacts.",
-                "pages": [
-                    6
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "transformer_safety": {
-                "patterns": [
-                    "how to ensure safety around transformers",
-                    "what precautions to take near Supercharger transformers",
-                    "how to handle transformer safety at Supercharger",
-                    "what are the safety guidelines for transformers",
-                    "how to work safely near transformers",
-                    "what to consider for transformer safety",
-                    "how to approach transformers at Supercharger",
-                    "what are the transformer safety measures",
-                    "how to ensure safe interaction with transformers",
-                    "what is the procedure for transformer safety"
-                ],
-                "answer": "Always be aware of electrical hazards when near transformers and follow existing standard operating procedures regarding high voltage incidents.",
-                "pages": [
-                    12
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "switchgear_safety": {
-                "patterns": [
-                    "how to ensure safety around switchgear",
-                    "what precautions to take near Supercharger switchgear",
-                    "how to handle switchgear safety at Supercharger",
-                    "what are the safety guidelines for switchgear",
-                    "how to work safely near switchgear",
-                    "what to consider for switchgear safety",
-                    "how to approach switchgear at Supercharger",
-                    "what are the switchgear safety measures",
-                    "how to ensure safe interaction with switchgear",
-                    "what is the procedure for switchgear safety"
-                ],
-                "answer": "Use caution around switchgear and follow existing standard operating procedures or guidelines regarding high voltage emergency incidents.",
-                "pages": [
-                    12
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "site_layout": {
-                "patterns": [
-                    "how to understand Supercharger site layout",
-                    "what is the layout of a Tesla Supercharger site",
-                    "how to navigate a Supercharger site",
-                    "what are the components of Supercharger layout",
-                    "how to find my way around Supercharger site",
-                    "what is the configuration of Supercharger stations",
-                    "how to identify layout features at Supercharger",
-                    "what are the key areas in Supercharger layout",
-                    "how to interpret Supercharger site design",
-                    "what is the procedure for understanding Supercharger layout"
-                ],
-                "answer": "Supercharger sites typically have switchgear and cabinets within 100 feet of the stalls, and layouts may vary by site. Familiarize yourself with the specific layout upon arrival.",
-                "pages": [
-                    13,
-                    15
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            },
-            "high_voltage_warning": {
-                "patterns": [
-                    "what are the high voltage warnings for Supercharger",
-                    "how to recognize high voltage hazards",
-                    "what precautions for high voltage at Supercharger",
-                    "how to handle high voltage warnings",
-                    "what are the safety measures for high voltage",
-                    "how to ensure safety from high voltage",
-                    "what are the high voltage safety guidelines",
-                    "how to approach high voltage areas safely",
-                    "what is the procedure for high voltage safety",
-                    "how to identify high voltage risks"
-                ],
-                "answer": "Always assume that all high voltage components are energized. Use insulated tools and appropriate PPE when working around high voltage equipment.",
-                "pages": [
-                    5
-                ],
-                "pdf": "Supercharger-Emergency-Response-Guide-en-US.pdf"
-            }
-        }
-    },
-    "TESLA ROADSTER": {
-        "intents": {
-            "disable_high_voltage": {
-                "patterns": [
-                    "how to disable high voltage in Tesla Roadster",
-                    "what steps to cut power in Tesla Roadster",
-                    "how to stop electrical flow in Tesla Roadster",
-                    "how to cut emergency disconnect in Tesla Roadster",
-                    "how to turn off high voltage in Tesla Roadster",
-                    "what to do to disable high voltage in Tesla Roadster",
-                    "how to safely disconnect power in Tesla Roadster",
-                    "how to stop current flow in Tesla Roadster",
-                    "how to cut the emergency disconnect cable in Tesla Roadster",
-                    "how to ensure Tesla Roadster is safe for rescue"
-                ],
-                "answer": "To disable high voltage in a Tesla Roadster, cut the Emergency Disconnect cable. For a 2008 Roadster, it is located under the trunk on the passenger side. For a Roadster 2, it is under the hood on the driver side. Always ensure the vehicle is turned off before cutting the cable.",
-                "pages": [
-                    6,
-                    7
-                ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
-            },
-            "extricate_trapped_person": {
-                "patterns": [
-                    "how to rescue a person trapped in Tesla Roadster",
-                    "what to do if someone is stuck in Tesla Roadster",
-                    "how to safely remove a person from Tesla Roadster",
-                    "how to cut Tesla Roadster to free trapped occupant",
-                    "what are the steps to extricate someone from Tesla Roadster",
-                    "how to access trapped individuals in Tesla Roadster",
-                    "how to perform rescue on Tesla Roadster",
-                    "how to handle trapped person in Tesla Roadster",
-                    "what precautions to take when rescuing from Tesla Roadster",
-                    "how to safely extricate from Tesla Roadster"
-                ],
-                "answer": "Before extricating a trapped person from a Tesla Roadster, ensure the high voltage system is disabled by cutting the Emergency Disconnect cable. Then, proceed with standard extrication techniques while being cautious of airbags and other SRS components.",
-                "pages": [
-                    6,
-                    7,
-                    8
-                ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
-            },
-            "identify_model_year": {
-                "patterns": [
-                    "how to determine the model year of Tesla Roadster",
-                    "what is the VIN location for Tesla Roadster",
-                    "how to find the model year from VIN in Tesla Roadster",
-                    "how to check Tesla Roadster model year",
-                    "what does the VIN tell about Tesla Roadster model year",
-                    "how to identify Tesla Roadster model year",
-                    "how to read VIN for Tesla Roadster",
-                    "what is the 10th character of VIN for Tesla Roadster",
-                    "how to locate VIN on Tesla Roadster",
-                    "how to differentiate Tesla Roadster model years"
-                ],
-                "answer": "To identify the model year of a Tesla Roadster, check the 10th character of the Vehicle Identification Number (VIN). An '8' indicates a 2008 Roadster, while an 'A' indicates a Roadster 2. The VIN can be found on the dashboard, chassis, or underside of the dashboard.",
+                "answer": "The windshield, roof, and side windows are laminated glass. Treat as potentially unstable; avoid cutting or striking glass; use proper glazing removal techniques as needed while maintaining HV safety.",
                 "pages": [
                     3
                 ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 3,
+                        "desc": "Laminated glass windows noted in notes",
+                        "highlight": {
+                            "x": 92.49382781982422,
+                            "y": 557.1998291015625,
+                            "w": 127.37989044189453,
+                            "h": 96.4696044921875
+                        }
+                    }
+                ]
             },
-            "fire_fighting_measures": {
+            "orange_insulated_hv_cables_warning": {
                 "patterns": [
-                    "how to extinguish fire in Tesla Roadster",
-                    "what to do if Tesla Roadster catches fire",
-                    "fire fighting procedures for Tesla Roadster",
-                    "how to handle fire in Tesla Roadster",
-                    "what precautions for fire in Tesla Roadster",
-                    "how to put out fire in Tesla Roadster",
-                    "fire safety measures for Tesla Roadster",
-                    "how to deal with lithium-ion fire in Tesla Roadster",
-                    "what to do if Tesla Roadster is on fire",
-                    "how to manage fire risk with Tesla Roadster"
+                    "why orange insulation on Cybertruck HV cables",
+                    "identify orange cables in Cybertruck rescue",
+                    "HV cable color coding Cybertruck guidance",
+                    "avoid touching orange insulation cables"
                 ],
-                "answer": "If a Tesla Roadster is on fire, do not use water if it is plugged in. If it is not plugged in, use water to cool the area and control the spread of the fire. Always shut off power to the charging source if connected.",
+                "answer": "All high voltage cables have orange insulation. Do not cut or open HV components or cables. Treat orange-insulated cables as HV risk; isolate power using the First Responder Loop and 48V disconnect.",
                 "pages": [
-                    9
+                    3
                 ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 3,
+                        "desc": "Orange insulation on high voltage cables",
+                        "highlight": {
+                            "x": 140.0930938720703,
+                            "y": 499.7702941894531,
+                            "w": 79.78071594238281,
+                            "h": 51.287628173828125
+                        }
+                    }
+                ]
             },
-            "battery_first_aid": {
+            "tonneau_and_liftgate_with_power": {
                 "patterns": [
-                    "what to do if battery leaks in Tesla Roadster",
-                    "how to handle battery chemical exposure in Tesla Roadster",
-                    "first aid for battery issues in Tesla Roadster",
-                    "how to treat battery burns from Tesla Roadster",
-                    "what to do for skin contact with Tesla Roadster battery",
-                    "how to respond to battery damage in Tesla Roadster",
-                    "what are the first aid steps for Tesla Roadster battery",
-                    "how to flush skin after battery contact in Tesla Roadster",
-                    "what to do for eye exposure to Tesla Roadster battery",
-                    "how to manage battery chemical burns in Tesla Roadster"
+                    "how to operate tonneau or liftgate with electrical power Cybertruck",
+                    "tonneau open or close in Cybertruck rescue",
+                    "liftgate electrical operation in crash",
+                    "opening tonneau with power on Cybertruck"
                 ],
-                "answer": "If materials from the Tesla Roadster's battery contact the skin, flush immediately with water and wash the affected area with soap. For eye contact, flush with water for 15 minutes and seek medical attention. Avoid inhaling vented gases.",
+                "answer": "Opening tonneau cover and liftgate is possible with electrical power; verify power state before attempting manual operation and ensure HV safety is established.",
                 "pages": [
-                    9
+                    3
                 ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 3,
+                        "desc": "Tonneau and liftgate operation with electrical power",
+                        "highlight": {
+                            "x": 316.15869140625,
+                            "y": 63.09232711791992,
+                            "w": 48.000091552734375,
+                            "h": 48.00008010864258
+                        }
+                    }
+                ]
             },
-            "srs_precautions": {
+            "opening_doors_without_power": {
                 "patterns": [
-                    "what precautions for airbags in Tesla Roadster",
-                    "how to handle airbags in Tesla Roadster",
-                    "safety measures for SRS in Tesla Roadster",
-                    "how to disable airbags in Tesla Roadster",
-                    "what to do near undeployed airbags in Tesla Roadster",
-                    "how to ensure safety with SRS in Tesla Roadster",
-                    "what are the risks with airbags in Tesla Roadster",
-                    "how to manage airbag risks in Tesla Roadster",
-                    "what to know about SRS in Tesla Roadster",
-                    "how to work safely with airbags in Tesla Roadster"
+                    "open front door without power Cybertruck",
+                    "how to gain entry if doors won't power open Cybertruck",
+                    "manual door access Cybertruck after crash",
+                    "extrication when door electronics fail Cybertruck"
                 ],
-                "answer": "Exercise standard precautions when working near undeployed airbags. Cutting the Emergency Disconnect cable will stop all current flow to the airbags. Always ensure the vehicle is powered off before approaching.",
+                "answer": "Opening front or rear doors without electrical power may be required. Proceed with manual methods only after confirming HV isolation. Extrication may be required if doors do not unlock from outside; follow PPE and stabilization steps.",
                 "pages": [
-                    8
+                    3
                 ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 3,
+                        "desc": "Opening doors without electrical power",
+                        "highlight": {
+                            "x": 84.44669342041016,
+                            "y": 83.41278076171875,
+                            "w": 218.27910614013672,
+                            "h": 113.79620361328125
+                        }
+                    }
+                ]
             },
-            "battery_disposal": {
+            "submerged_vehicle_in_water_warning": {
                 "patterns": [
-                    "how to dispose of Tesla Roadster battery",
-                    "what are the disposal regulations for Tesla Roadster battery",
-                    "how to recycle Tesla Roadster battery",
-                    "what to do with Tesla Roadster battery after use",
-                    "how to handle battery disposal in Tesla Roadster",
-                    "what are the guidelines for Tesla Roadster battery disposal",
-                    "how to manage lithium-ion battery disposal",
-                    "what to know about recycling Tesla Roadster battery",
-                    "how to safely dispose of Tesla Roadster battery",
-                    "what are the steps for battery disposal in Tesla Roadster"
+                    "Cybertruck submerged in water rescue steps",
+                    "submerged vehicle battery risk after water exposure",
+                    "in water handling for Cybertruck rescue",
+                    "submersion procedure for Cybertruck HV safety"
                 ],
-                "answer": "The Tesla Roadster's lithium-ion batteries do not contain heavy metals and are exempt from hazardous waste disposal standards. However, they should be recycled whenever possible. Contact local authorities for proper disposal methods.",
-                "pages": [
-                    10
-                ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
-            },
-            "high_voltage_warning": {
-                "patterns": [
-                    "what are the high voltage risks in Tesla Roadster",
-                    "how to identify high voltage components in Tesla Roadster",
-                    "what to know about high voltage in Tesla Roadster",
-                    "how to handle high voltage cables in Tesla Roadster",
-                    "what precautions for high voltage in Tesla Roadster",
-                    "how to recognize high voltage risks in Tesla Roadster",
-                    "what are the safety measures for high voltage in Tesla Roadster",
-                    "how to avoid high voltage hazards in Tesla Roadster",
-                    "what to do with high voltage in Tesla Roadster",
-                    "how to safely approach Tesla Roadster with high voltage"
-                ],
-                "answer": "All high voltage cables and components in the Tesla Roadster are enclosed in orange insulation. Never touch or cut these cables without first disabling the high voltage system by cutting the Emergency Disconnect cable.",
-                "pages": [
-                    5
-                ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
-            },
-            "battery_pack_identification": {
-                "patterns": [
-                    "how to identify Tesla Roadster battery pack",
-                    "what does Tesla Roadster battery pack look like",
-                    "how to locate battery pack in Tesla Roadster",
-                    "where is the battery pack in Tesla Roadster",
-                    "how to access Tesla Roadster battery pack",
-                    "what are the features of Tesla Roadster battery pack",
-                    "how to recognize battery pack in Tesla Roadster",
-                    "what to know about Tesla Roadster battery pack",
-                    "how to find battery pack in Tesla Roadster",
-                    "how to handle Tesla Roadster battery pack"
-                ],
-                "answer": "The Tesla Roadster's Battery Pack is located behind the seats in the trunk area and is housed in a black enclosure. It consists of several thousand lithium-ion cells.",
+                "answer": "If submerged, treat like any submerged vehicle with PPE for water rescue. Remove from water and continue with normal HV disabling. Submersion can cause HV battery risk and possible re-ignition.",
                 "pages": [
                     4
                 ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 4,
+                        "desc": "Submersion guidance and HV safety in water",
+                        "highlight": {
+                            "x": 16.90134048461914,
+                            "y": 558.2396240234375,
+                            "w": 290.27648544311523,
+                            "h": 76.0682373046875
+                        }
+                    }
+                ]
             },
-            "safety_considerations": {
+            "store_outside_after_fire_submersion": {
                 "patterns": [
-                    "what are the safety considerations for Tesla Roadster",
-                    "how to ensure safety when handling Tesla Roadster",
-                    "what precautions to take with Tesla Roadster",
-                    "how to approach Tesla Roadster safely",
-                    "what to know about safety in Tesla Roadster",
-                    "how to handle emergencies with Tesla Roadster",
-                    "what are the risks with Tesla Roadster",
-                    "how to manage safety risks in Tesla Roadster",
-                    "what safety measures for Tesla Roadster",
-                    "how to ensure safe response to Tesla Roadster"
+                    "where to store a Cybertruck after fire",
+                    "distance from other vehicles after battery fire",
+                    "safe storage distance after HV battery fire Cybertruck",
+                    "post-fire storage guidelines Cybertruck"
                 ],
-                "answer": "When handling a Tesla Roadster, always assume it has electrical power. Ensure the high voltage system is disabled before performing any emergency response procedures. Be aware of the silent operation of the vehicle.",
+                "answer": "After a fire, store outside at least 50 ft (15 m) away from other vehicles and structures. Monitor HV battery ambient temperature for at least 24 hours and check HV battery temperature before transport.",
                 "pages": [
-                    5
+                    4
                 ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 4,
+                        "desc": "Store outside 50 ft away after fire; monitor HV temp",
+                        "highlight": {
+                            "x": 90.0,
+                            "y": 90.0,
+                            "w": 100.0,
+                            "h": 40.0
+                        }
+                    }
+                ]
             },
-            "airbag_location": {
+            "water_cooling_of_battery_enclosure": {
                 "patterns": [
-                    "where are the airbags in Tesla Roadster",
-                    "how to find airbags in Tesla Roadster",
-                    "what is the airbag location in Tesla Roadster",
-                    "how to identify airbag positions in Tesla Roadster",
-                    "what to know about airbags in Tesla Roadster",
-                    "how to access airbags in Tesla Roadster",
-                    "where to look for airbags in Tesla Roadster",
-                    "how to handle airbags in Tesla Roadster",
-                    "what are the airbag features in Tesla Roadster",
-                    "how to manage airbag risks in Tesla Roadster"
+                    "how to cool the battery enclosure after submersion",
+                    "cooling method for Cybertruck battery after fire or submersion",
+                    "uses of water not foam Cybertruck HV cooling"
                 ],
-                "answer": "The driver airbag is located in the padded hub of the steering wheel, while the passenger airbag is located on the dashboard, indicated by the word 'AIRBAG' on the trim.",
+                "answer": "Use large amounts of water to cool the battery enclosure from the bottom of the vehicle; firefighting foam is not recommended. SCBA may be required due to fumes.",
                 "pages": [
-                    8
+                    4
                 ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 4,
+                        "desc": "Cool battery enclosure with water from bottom; avoid foam",
+                        "highlight": {
+                            "x": 316.0,
+                            "y": 60.0,
+                            "w": 100.0,
+                            "h": 60.0
+                        }
+                    }
+                ]
             },
-            "battery_materials": {
+            "pictograms_explanation": {
                 "patterns": [
-                    "what materials are in Tesla Roadster battery",
-                    "how to identify battery materials in Tesla Roadster",
-                    "what are the components of Tesla Roadster battery",
-                    "how to handle battery materials in Tesla Roadster",
-                    "what to know about battery composition in Tesla Roadster",
-                    "how to manage battery materials in Tesla Roadster",
-                    "what are the risks with battery materials in Tesla Roadster",
-                    "how to recognize battery materials in Tesla Roadster",
-                    "what is the chemical composition of Tesla Roadster battery",
-                    "how to deal with battery materials in Tesla Roadster"
+                    "what do the pictograms mean in the Cybertruck sheet",
+                    "explanation of rescue pictograms",
+                    "pictogram meaning for first responders Cybertruck"
                 ],
-                "answer": "The Tesla Roadster's battery consists of hermetically sealed lithium-ion cells containing various materials, including Lithium Cobalt Oxide and Graphite. Under normal conditions, there is no risk of exposure.",
+                "answer": "The guide includes an explanation of pictograms (section 10). Review pictograms to identify hazards, procedures, and safety advisories at a glance to support rapid decisions in the field.",
                 "pages": [
-                    11
+                    4
                 ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 4,
+                        "desc": "10. Explanation of Pictograms overview",
+                        "highlight": {
+                            "x": 373.364501953125,
+                            "y": 34.81192398071289,
+                            "w": 53.908599853515625,
+                            "h": 44.93764877319336
+                        }
+                    }
+                ]
             },
-            "emergency_contact_info": {
+            "meltdown_and_reignite_warning": {
                 "patterns": [
-                    "what is the emergency contact for Tesla Roadster",
-                    "how to reach Tesla emergency services",
-                    "who to contact in case of Tesla Roadster emergency",
-                    "what is the emergency number for Tesla Roadster",
-                    "how to get help for Tesla Roadster issues",
-                    "what are the emergency contacts for Tesla Roadster",
-                    "how to contact Tesla for emergencies",
-                    "who to call for Tesla Roadster emergencies",
-                    "what is the Tesla emergency response number",
-                    "how to find Tesla emergency contact information"
+                    "can HV battery re-ignite after submersion or fire Cybertruck",
+                    "HV battery re-ignition warning",
+                    "watch for battery re-ignition after extinguishing",
+                    "how to monitor for re-ignition in Cybertruck"
                 ],
-                "answer": "For emergencies, contact Tesla at 1-877-79TESLA (1-877-798-3752) in the USA. For international emergencies, contact Chemtrec at 1-703-527-3887.",
+                "answer": "Be aware of possible battery re-ignition after fire or submersion. Store away and monitor ambient temperature for at least 24 hours. Use water cooling and avoid foam to prevent re-ignition risk.",
                 "pages": [
-                    10
+                    4
                 ],
-                "pdf": "Tesla_Roadster_Emergency_Responder_Guide.pdf"
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 4,
+                        "desc": "Possible battery re-ignition warning",
+                        "highlight": {
+                            "x": 140.0,
+                            "y": 500.0,
+                            "w": 80.0,
+                            "h": 50.0
+                        }
+                    }
+                ]
+            },
+            "roadside_towing_and_assistance_links": {
+                "patterns": [
+                    "how to contact Tesla roadside assistance Cybertruck",
+                    "where to find first responders resources Cybertruck",
+                    "Tesla emergency contact for Cybertruck rescue",
+                    "roadside assistance hotline Cybertruck"
+                ],
+                "answer": "For towing and roadside assistance, contact Tesla Roadside Assistance. Refer to Tesla first responders resources as needed. Use the hotline specified by Tesla for emergency support.",
+                "pages": [
+                    4
+                ],
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 4,
+                        "desc": "Towing and roadside assistance reference",
+                        "highlight": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "w": 0.0,
+                            "h": 0.0
+                        }
+                    }
+                ]
+            },
+            "engine_noise_warning": {
+                "patterns": [
+                    "does lack of engine noise mean the Cybertruck is off",
+                    "if it seems quiet is the vehicle powered",
+                    "silent movement or instant restart Cybertruck warning"
+                ],
+                "answer": "A lack of engine noise does not indicate the vehicle is off. Silent movement or instant restart capability exists until the vehicle is fully shut down. Treat as energized until disconnection steps are completed and PPE is worn.",
+                "pages": [
+                    2
+                ],
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 2,
+                        "desc": "Warning: lack of engine noise does not equal off",
+                        "highlight": {
+                            "x": 311.19110107421875,
+                            "y": 84.63070678710938,
+                            "w": 192.055908203125,
+                            "h": 111.36019897460938
+                        }
+                    }
+                ]
+            },
+            "safe_distance_and_palces_for_storage": {
+                "patterns": [
+                    "how far to store Cybertruck after fire",
+                    "safe distance storage for HV battery post-incident",
+                    "storage distance from other vehicles Cybertruck"
+                ],
+                "answer": "Store the vehicle at least 50 feet (15 meters) away from other vehicles and structures after fire or HV-related incidents. Maintain a safe perimeter during cooling and monitoring.",
+                "pages": [
+                    4
+                ],
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 4,
+                        "desc": "Safe distance after fire 50 ft",
+                        "highlight": {
+                            "x": 371.7731018066406,
+                            "y": 61.521514892578125,
+                            "w": 148.56002807617188,
+                            "h": 48.200469970703125
+                        }
+                    }
+                ]
+            },
+            "HV_battery_temperature_check_before_transport": {
+                "patterns": [
+                    "check HV battery temperature before transport Cybertruck",
+                    "HV battery temperature protocol for transport",
+                    "when to assess battery temp prior to moving Cybertruck"
+                ],
+                "answer": "Before transport, HV battery temperature should be checked to assess safety risks. If elevated, continue cooling and ensure safe handling.",
+                "pages": [
+                    4
+                ],
+                "pdf": "Cybertruck-Rescue-Sheet.pdf",
+                "images": [
+                    {
+                        "page": 4,
+                        "desc": "HV battery temperature check before transport",
+                        "highlight": {
+                            "x": 90.0,
+                            "y": 90.0,
+                            "w": 100.0,
+                            "h": 40.0
+                        }
+                    }
+                ]
             }
         }
     }
