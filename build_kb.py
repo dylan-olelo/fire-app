@@ -124,7 +124,7 @@ def generate_kb_entries(client: OpenAI, model_name: str, pdf_text: Dict[int, str
                 "type": "image_url",
                 "image_url": {"url": f"data:image/png;base64,{b64}"}
             })
-        doc.close()
+        doc.close() 
         
         user_prompt = (
             f"Analyze the provided page images from the {model_name} rescue sheet (file: {pdf_filename}). "
