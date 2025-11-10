@@ -22,7 +22,7 @@ class KBQuery:
         self.embedder = None  # Lazy load
         self.session_history = []
         self.intent_embeddings = self.load_or_precompute_embeddings()  # Cached
-        self.fuzzy_threshold = 90  # For keyword fallback
+        self.fuzzy_threshold = 70  # For keyword fallback
         self.persisted_model = None  # Store model across turns
     
     def load_kb(self, path: str) -> Dict:
@@ -106,21 +106,19 @@ class KBQuery:
             for intent_name, data in self.intent_embeddings[model].items():
                 similarities = util.pytorch_cos_sim(query_emb, data["emb"])[0]
                 max_sim = similarities.max().item()
-                # if max_sim > 1: 
-                if True: # Lowered threshold for more matches
+                if max_sim > 0.6: 
                     matches.append({
                         "model": model,
                         "intent": intent_name,
                         "score": max_sim,
                         "entry": data["entry"]
                     })
-                # else:
+                else:
                     # NEW: Fuzzy keyword fallback if semantic low
                     all_patterns = " ".join(data["entry"].get("patterns", []))
                     # Use token_set_ratio for stricter, token-based matching
                     fuzzy_score = process.extractOne(full_query, [all_patterns], scorer=fuzz.token_set_ratio)[1]
-                    # if fuzzy_score > self.fuzzy_threshold:
-                    if True:
+                    if fuzzy_score > self.fuzzy_threshold:
                         matches.append({
                             "model": model,
                             "intent": intent_name,
@@ -193,7 +191,7 @@ if __name__ == "__main__":
                 if "images" in top:
                     print(f"Images: {top['images']}")
             else:
-                print("\nAssistant: Sorry, I couldn't find a good match in the guide. Try rephrasing?")
+                print("\nAssistant: Sorry, I couldn't find a good answer in the guide. Try rephrasing your question?")
         except KeyboardInterrupt:
             print("\nGoodbye!")
             break

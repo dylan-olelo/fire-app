@@ -52,7 +52,7 @@ def visualize_highlights(kb_path: str, pdf_path: str, model_name: str, intent_na
 if __name__ == "__main__":
     visualize_highlights(
         kb_path="kb/curated_kb.json",
-        pdf_path="documents_testing/Cybertruck-Rescue-Sheet.pdf",
-        model_name="Cybertruck Rescue Sheet",  # From your KB
-        intent_name="disable_high_voltage"     # Pick one with images
+        pdf_path="documents/TESLA_CYBERTRUCK/Cybertruck-Rescue-Sheet.pdf",
+        model_name="TESLA_CYBERTRUCK",
+        intent_name="disable_high_voltage"
     )
